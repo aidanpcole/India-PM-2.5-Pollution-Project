@@ -1,8 +1,8 @@
 /* global initializeMap, initializeDataTable */
 /* 1. === Setting up Map === */
-/* changed map zoom from 11 to 10 and latitude
-and longitude to 34,0836417742618, -118.5298649280784 */
-let map = L.map('map', { zoomControl: false }).setView([34.0836417742618, -118.5298649280784], 10);
+/* set up with zoom 5, may change, changed lat
+and long from 34,0836417742618, -118.5298649280784 */
+let map = L.map('map', { zoomControl: false }).setView([18.94912507893521, 71.76038349786984], 5);
 
 const basemap = 'http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png';
 const attribution = 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>.';

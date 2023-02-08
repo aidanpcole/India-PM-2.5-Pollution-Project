@@ -46,7 +46,7 @@ const slides = [storySlide, filterslide];
 const motive = {
   title: 'Summary Statistics',
   slide: 'motive',
-  content: `<p>Here, we want to put an interactive data table that presents summary statistics depending on the layer shown and the user's selected Census Tract.</p>`
+  content: `<p>Here, we want to put an interactive data table that presents summary statistics depending on the layer shown and the user's selected district.</p>`
 };
 
 // const motivationText = [motive]

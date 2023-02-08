@@ -36,9 +36,9 @@ let tableData;
   layer.bindPopup(resourceName);
   }; */
 
-function onEachFeatureHVI(feature, layer) {
+function onEachFeatureTWTEN(feature, layer) {
 // use feature.properties to construct popup html
-  let popupContent = '<table class="popupTable"><th><h3>Census Tract Stats</h3></th>';
+  let popupContent = '<table class="popupTable"><th><h3>District Stats</h3></th>';
   for (let p of Object.keys(feature.properties)) {
     popupContent += `<tr><td>${p}</td><td>${feature.properties[p]}</td></tr>`;
   }
@@ -48,35 +48,126 @@ function onEachFeatureHVI(feature, layer) {
   // layer.bindPopup(HVIScore);
 }
 
-function onEachFeatureSVI(feature, layer) {
-  // use feature.properties to construct popup html
-  let popupContent = '<table class="popupTable"> <th><h3>Census Tract Stats</h3></th>';
+
+function onEachFeatureTWELE(feature, layer) {
+// use feature.properties to construct popup html
+  let popupContent = '<table class="popupTable"><th><h3>District Stats</h3></th>';
   for (let p of Object.keys(feature.properties)) {
     popupContent += `<tr><td>${p}</td><td>${feature.properties[p]}</td></tr>`;
   }
   popupContent += '</table>';
   layer.bindPopup(popupContent);
-  // var SVIScore = `<h2> Social Vulnerability Score: ${feature.properties.rSocVulScore} </h2>`;
-  // layer.bindPopup(SVIScore);
+  // var HVIScore = `<h2> Heat Vulnerability Score: ${feature.properties.rTotalVulScore} </h2>`;
+  // layer.bindPopup(HVIScore);
 }
 
 
-function onEachFeaturePVI(feature, layer) {
-  // use feature.properties to construct popup html
-  let popupContent = '<table class="popupTable"><th><h3>Census Tract Stats</h3></th>';
+function onEachFeatureTWTWE(feature, layer) {
+// use feature.properties to construct popup html
+  let popupContent = '<table class="popupTable"><th><h3>District Stats</h3></th>';
   for (let p of Object.keys(feature.properties)) {
     popupContent += `<tr><td>${p}</td><td>${feature.properties[p]}</td></tr>`;
   }
   popupContent += '</table>';
   layer.bindPopup(popupContent);
-  // var PVIScore = `<h2> Physical Vulnerability Score: ${feature.properties.rPhysVulScore} </h2>`;
-  // layer.bindPopup(PVIScore);
+  // var HVIScore = `<h2> Heat Vulnerability Score: ${feature.properties.rTotalVulScore} </h2>`;
+  // layer.bindPopup(HVIScore);
 }
 
+
+function onEachFeatureTWTHI(feature, layer) {
+// use feature.properties to construct popup html
+  let popupContent = '<table class="popupTable"><th><h3>District Stats</h3></th>';
+  for (let p of Object.keys(feature.properties)) {
+    popupContent += `<tr><td>${p}</td><td>${feature.properties[p]}</td></tr>`;
+  }
+  popupContent += '</table>';
+  layer.bindPopup(popupContent);
+  // var HVIScore = `<h2> Heat Vulnerability Score: ${feature.properties.rTotalVulScore} </h2>`;
+  // layer.bindPopup(HVIScore);
+}
+
+
+function onEachFeatureTWFOU(feature, layer) {
+// use feature.properties to construct popup html
+  let popupContent = '<table class="popupTable"><th><h3>District Stats</h3></th>';
+  for (let p of Object.keys(feature.properties)) {
+    popupContent += `<tr><td>${p}</td><td>${feature.properties[p]}</td></tr>`;
+  }
+  popupContent += '</table>';
+  layer.bindPopup(popupContent);
+  // var HVIScore = `<h2> Heat Vulnerability Score: ${feature.properties.rTotalVulScore} </h2>`;
+  // layer.bindPopup(HVIScore);
+}
+
+
+function onEachFeatureTWFIF(feature, layer) {
+// use feature.properties to construct popup html
+  let popupContent = '<table class="popupTable"><th><h3>District Stats</h3></th>';
+  for (let p of Object.keys(feature.properties)) {
+    popupContent += `<tr><td>${p}</td><td>${feature.properties[p]}</td></tr>`;
+  }
+  popupContent += '</table>';
+  layer.bindPopup(popupContent);
+  // var HVIScore = `<h2> Heat Vulnerability Score: ${feature.properties.rTotalVulScore} </h2>`;
+  // layer.bindPopup(HVIScore);
+}
+
+
+function onEachFeatureTWSIX(feature, layer) {
+// use feature.properties to construct popup html
+  let popupContent = '<table class="popupTable"><th><h3>District Stats</h3></th>';
+  for (let p of Object.keys(feature.properties)) {
+    popupContent += `<tr><td>${p}</td><td>${feature.properties[p]}</td></tr>`;
+  }
+  popupContent += '</table>';
+  layer.bindPopup(popupContent);
+  // var HVIScore = `<h2> Heat Vulnerability Score: ${feature.properties.rTotalVulScore} </h2>`;
+  // layer.bindPopup(HVIScore);
+}
+
+
+function onEachFeatureTWSEV(feature, layer) {
+// use feature.properties to construct popup html
+  let popupContent = '<table class="popupTable"><th><h3>District Stats</h3></th>';
+  for (let p of Object.keys(feature.properties)) {
+    popupContent += `<tr><td>${p}</td><td>${feature.properties[p]}</td></tr>`;
+  }
+  popupContent += '</table>';
+  layer.bindPopup(popupContent);
+  // var HVIScore = `<h2> Heat Vulnerability Score: ${feature.properties.rTotalVulScore} </h2>`;
+  // layer.bindPopup(HVIScore);
+}
+
+
+function onEachFeatureTWEIG(feature, layer) {
+// use feature.properties to construct popup html
+  let popupContent = '<table class="popupTable"><th><h3>District Stats</h3></th>';
+  for (let p of Object.keys(feature.properties)) {
+    popupContent += `<tr><td>${p}</td><td>${feature.properties[p]}</td></tr>`;
+  }
+  popupContent += '</table>';
+  layer.bindPopup(popupContent);
+  // var HVIScore = `<h2> Heat Vulnerability Score: ${feature.properties.rTotalVulScore} </h2>`;
+  // layer.bindPopup(HVIScore);
+}
+
+
+function onEachFeatureTWNIN(feature, layer) {
+// use feature.properties to construct popup html
+  let popupContent = '<table class="popupTable"><th><h3>District Stats</h3></th>';
+  for (let p of Object.keys(feature.properties)) {
+    popupContent += `<tr><td>${p}</td><td>${feature.properties[p]}</td></tr>`;
+  }
+  popupContent += '</table>';
+  layer.bindPopup(popupContent);
+  // var HVIScore = `<h2> Heat Vulnerability Score: ${feature.properties.rTotalVulScore} </h2>`;
+  // layer.bindPopup(HVIScore);
+}
 
 
 // === Map color Function === //
-function getColorHVI(d) {
+function getColorTWTEN(d) {
   return d > 4 ? '#b30000'
     : d > 3  ? '#e34a33'
       : d > 2   ? '#fc8d59'
@@ -85,28 +176,92 @@ function getColorHVI(d) {
             : '#fff9db';
 }
 
-function getColorSVI(d) {
-  return d > 4 ? '#045a8d'
-    : d > 3  ? '#2b8cbe'
-      : d > 2   ? '#74a9cf'
-        : d > 1   ? '#bdc9e1'
-          : d > 0   ? '#f1eef6'
+function getColorTWELE(d) {
+  return d > 4 ? '#b30000'
+    : d > 3  ? '#e34a33'
+      : d > 2   ? '#fc8d59'
+        : d > 1   ? '#fdcc8a'
+          : d > 0   ? '#fef0d9'
             : '#fff9db';
 }
 
-function getColorPVI(d) {
-  return d > 4 ? '#7a0177'
-    : d > 3  ? '#c51b8a'
-      : d > 2   ? '#f768a1'
-        : d > 1   ? '#fbb4b9'
-          : d > 0   ? '#feebe2'
+function getColorTWTWE(d) {
+  return d > 4 ? '#b30000'
+    : d > 3  ? '#e34a33'
+      : d > 2   ? '#fc8d59'
+        : d > 1   ? '#fdcc8a'
+          : d > 0   ? '#fef0d9'
             : '#fff9db';
 }
+
+function getColorTWTHI(d) {
+  return d > 4 ? '#b30000'
+    : d > 3  ? '#e34a33'
+      : d > 2   ? '#fc8d59'
+        : d > 1   ? '#fdcc8a'
+          : d > 0   ? '#fef0d9'
+            : '#fff9db';
+}
+
+function getColorTWFOU(d) {
+  return d > 4 ? '#b30000'
+    : d > 3  ? '#e34a33'
+      : d > 2   ? '#fc8d59'
+        : d > 1   ? '#fdcc8a'
+          : d > 0   ? '#fef0d9'
+            : '#fff9db';
+}
+
+function getColorTWFIF(d) {
+  return d > 4 ? '#b30000'
+    : d > 3  ? '#e34a33'
+      : d > 2   ? '#fc8d59'
+        : d > 1   ? '#fdcc8a'
+          : d > 0   ? '#fef0d9'
+            : '#fff9db';
+}
+
+function getColorTWSIX(d) {
+  return d > 4 ? '#b30000'
+    : d > 3  ? '#e34a33'
+      : d > 2   ? '#fc8d59'
+        : d > 1   ? '#fdcc8a'
+          : d > 0   ? '#fef0d9'
+            : '#fff9db';
+}
+
+function getColorTWSEV(d) {
+  return d > 4 ? '#b30000'
+    : d > 3  ? '#e34a33'
+      : d > 2   ? '#fc8d59'
+        : d > 1   ? '#fdcc8a'
+          : d > 0   ? '#fef0d9'
+            : '#fff9db';
+}
+
+function getColorTWEIG(d) {
+  return d > 4 ? '#b30000'
+    : d > 3  ? '#e34a33'
+      : d > 2   ? '#fc8d59'
+        : d > 1   ? '#fdcc8a'
+          : d > 0   ? '#fef0d9'
+            : '#fff9db';
+}
+
+function getColorTWNIN(d) {
+  return d > 4 ? '#b30000'
+    : d > 3  ? '#e34a33'
+      : d > 2   ? '#fc8d59'
+        : d > 1   ? '#fdcc8a'
+          : d > 0   ? '#fef0d9'
+            : '#fff9db';
+}
+
 
 // === Style  === //
-function styleHVI(feature) {
+function styleTWTEN(feature) {
   return {
-    fillColor: getColorHVI(feature.properties["Total Vulnerability Score Quantile"]),
+    fillColor: getColorTWTEN(feature.properties["2010 PM 2.5 Concentration Quantile"]),
     weight: 0.5,
     opacity: 0.7,
     color: "gray",
@@ -115,9 +270,9 @@ function styleHVI(feature) {
   };
 }
 
-function styleSVI(feature) {
+function styleTWELE(feature) {
   return {
-    fillColor: getColorSVI(feature.properties["Social Vulnerability Score Quantile"]),
+    fillColor: getColorTWELE(feature.properties["2011 PM 2.5 Concentration Quantile"]),
     weight: 0.5,
     opacity: 0.7,
     color: "gray",
@@ -126,10 +281,86 @@ function styleSVI(feature) {
   };
 }
 
-
-function stylePVI(feature) {
+function styleTWTWE(feature) {
   return {
-    fillColor: getColorPVI(feature.properties["Physical Vulnerability Score Quantile"]),
+    fillColor: getColorTWTWE(feature.properties["2012 PM 2.5 Concentration Quantile"]),
+    weight: 0.5,
+    opacity: 0.7,
+    color: "gray",
+    fillOpacity: 0.5,
+    colorOpacity: 0.1,
+  };
+}
+
+function styleTWTHI(feature) {
+  return {
+    fillColor: getColorTWTHI(feature.properties["2013 PM 2.5 Concentration Quantile"]),
+    weight: 0.5,
+    opacity: 0.7,
+    color: "gray",
+    fillOpacity: 0.5,
+    colorOpacity: 0.1,
+  };
+}
+
+function styleTWFOU(feature) {
+  return {
+    fillColor: getColorTWFOU(feature.properties["2014 PM 2.5 Concentration Quantile"]),
+    weight: 0.5,
+    opacity: 0.7,
+    color: "gray",
+    fillOpacity: 0.5,
+    colorOpacity: 0.1,
+  };
+}
+
+function styleTWFIF(feature) {
+  return {
+    fillColor: getColorTWFIF(feature.properties["2015 PM 2.5 Concentration Quantile"]),
+    weight: 0.5,
+    opacity: 0.7,
+    color: "gray",
+    fillOpacity: 0.5,
+    colorOpacity: 0.1,
+  };
+}
+
+function styleTWSIX(feature) {
+  return {
+    fillColor: getColorTWSIX(feature.properties["2016 PM 2.5 Concentration Quantile"]),
+    weight: 0.5,
+    opacity: 0.7,
+    color: "gray",
+    fillOpacity: 0.5,
+    colorOpacity: 0.1,
+  };
+}
+
+function styleTWSEV(feature) {
+  return {
+    fillColor: getColorTWSEV(feature.properties["2017 PM 2.5 Concentration Quantile"]),
+    weight: 0.5,
+    opacity: 0.7,
+    color: "gray",
+    fillOpacity: 0.5,
+    colorOpacity: 0.1,
+  };
+}
+
+function styleTWEIG(feature) {
+  return {
+    fillColor: getColorTWEIG(feature.properties["2018 PM 2.5 Concentration Quantile"]),
+    weight: 0.5,
+    opacity: 0.7,
+    color: "gray",
+    fillOpacity: 0.5,
+    colorOpacity: 0.1,
+  };
+}
+
+function styleTWNIN(feature) {
+  return {
+    fillColor: getColorTWNIN(feature.properties["2019 PM 2.5 Concentration Quantile"]),
     weight: 0.5,
     opacity: 0.7,
     color: "gray",
@@ -141,9 +372,16 @@ function stylePVI(feature) {
 // === realted styles for mapping ==//
 
 const stylevars = {
-  HVI: styleHVI,
-  PVI: stylePVI,
-  SVI: styleSVI
+  TWTEN: styleTWTEN,
+  TWELE: styleTWELE,
+  TWTWE: styleTWTWE,
+  TWTHI: styleTWTHI,
+  TWFOU: styleTWFOU,
+  TWFIF: styleTWFIF,
+  TWSIX: styleTWSIX,
+  TWSEV: styleTWSEV,
+  TWEIG: styleTWEIG,
+  TWNIN: styleTWNIN
 };
 
 const bindingsvars = {
@@ -547,4 +785,3 @@ function PVICheck() {
 // const urlList = [coolingCenters, emergencyP, pools]
 
 // urlList.forEach(element => updateMap(element))
-
