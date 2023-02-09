@@ -43,7 +43,7 @@ function getTableData(callback1, callback2) {
 
 function intialTableData(callback1, callback2) {
   dlist.features.forEach(ele => dataT.push(ele.properties)); // creates dataT
-  colly = "Total Vulnerability Score";
+  colly = "2010 PM 2.5";
   if (callback1) {
     callback1();
   }
@@ -68,7 +68,7 @@ let h = [];
 let ishere;
 let trace = {};
 
-function showmeHistogram(column, tractID) {
+function showmeHistogram(column, districtID) {
   // document.querySelector("#histHere").innerHTML = ""
 
   let x = [];
@@ -89,7 +89,7 @@ function showmeHistogram(column, tractID) {
   };
   console.log(x);
 
-  if (tractID) {
+  if (districtID) {
     let datahist = [trace];
     layout = {
       title: `Distribution of ${column}`,
@@ -122,13 +122,13 @@ function showmeHistogram(column, tractID) {
 
 function getTractID() {
   h.length = 0;
-  const tractnum = document.getElementById("tractenter").value;
+  const districtnum = document.getElementById("districtenter").value;
   let col = colly;
-  let tractID;
-  tractID = tractnum;
-  dataT.forEach(d => { if (d.Tract === String(tractID)) { h.push(d[col]); } });
+  let districtID;
+  districtID = districtnum;
+  dataT.forEach(d => { if (d.District === String(districtID)) { h.push(d[col]); } });
 
-  showmeHistogram(col, tractID);
+  showmeHistogram(col, districtID);
 }
 function addHistInput() {
   // create input box and histogram place
@@ -137,11 +137,11 @@ function addHistInput() {
   const inputEnterButton = document.createElement("button");
   const inputcontainer = document.createElement("div");
   input.setAttribute("type", "text");
-  input.setAttribute("placeholder", "Search For a Census Tract");
-  input.setAttribute("id", "tractenter");
-  inputEnterButton.setAttribute("id", "tractButton");
-  inputEnterButton.innerHTML = "Search Tract";
-  inputEnterButton.addEventListener("click", getTractID);
+  input.setAttribute("placeholder", "Search For a District");
+  input.setAttribute("id", "districtenter");
+  inputEnterButton.setAttribute("id", "districtButton");
+  inputEnterButton.innerHTML = "Search District";
+  inputEnterButton.addEventListener("click", getDistrictID);
 
   hist.setAttribute('id', 'histHere');
   // locate elements

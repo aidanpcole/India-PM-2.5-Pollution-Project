@@ -3,7 +3,7 @@ TWFOUlegend, TWFIFlegend, TWSIXlegend, TWSEVlegend, TWEIGlegend, TWNINlegend,
 getTableData, getLegend, sidebarContentController, intialTableData,
 dataT, showmeHistogram, addHistInput, checkies, showdown */
 let dlist;
-/* === OUR DATA ON GITHUB === */
+/* === MY DATA ON GITHUB === */
 const mapvars = {
   TWTEN: "https://raw.githubusercontent.com/aidanpcole/India-PM-2.5-Pollution-Project/main/data/DataForMap/2010pm25.geojson",
   TWELE: "https://raw.githubusercontent.com/aidanpcole/India-PM-2.5-Pollution-Project/main/data/DataForMap/2011pm25.geojson",
@@ -464,25 +464,25 @@ function updateMap(url, styleType, bindings, callback) {
 //});
 
 
-function getMarker(pointName) {
-  let icon2use;
-  if (pointName === "coolingCenters") {
-    icon2use = coolingCentersIcon;
-  }
-  if (pointName === "emergencyP") {
-    icon2use = emergencyPIcon;
-  }
-  if (pointName === "pools") {
-    icon2use = poolsIcon;
-  }
-  if (pointName === "parks") {
-    icon2use = parksIcon;
-  }
-  if (pointName === "hosp") {
-    icon2use = hospIcon;
-  }
-  return icon2use;
-}
+//function getMarker(pointName) {
+//  let icon2use;
+//  if (pointName === "coolingCenters") {
+//    icon2use = coolingCentersIcon;
+//  }
+//  if (pointName === "emergencyP") {
+//    icon2use = emergencyPIcon;
+//  }
+//  if (pointName === "pools") {
+//    icon2use = poolsIcon;
+//  }
+//  if (pointName === "parks") {
+//    icon2use = parksIcon;
+//  }
+//  if (pointName === "hosp") {
+//    icon2use = hospIcon;
+//  }
+//  return icon2use;
+//}
 //= ========== point data bindings =============//
 
 
@@ -656,15 +656,15 @@ function determineMap() {
   });
   console.log(names);
   names.forEach(name => {
-    if (pointLayers.includes(name)) {
-      if (name === "parks") {
-        updateMappointParks(mapvars[name], name, emptyCallback);
-      }
-      if (name === "emergencyP") {
-        updateMappointEmergency(mapvars[name], name, emptyCallback);
-      }
-      updateMappointPCH(mapvars[name], name, emptyCallback);
-    }
+//    if (pointLayers.includes(name)) {
+//      if (name === "parks") {
+//        updateMappointParks(mapvars[name], name, emptyCallback);
+//      }
+//      if (name === "emergencyP") {
+//        updateMappointEmergency(mapvars[name], name, emptyCallback);
+//      }
+//      updateMappointPCH(mapvars[name], name, emptyCallback);
+//    }
     if (polygonLayers.includes(name)) {
       updateMap(mapvars[name], stylevars[name], bindingsvars[name], getTableData);
       getLegend(name);
@@ -716,16 +716,17 @@ function anyChecked() {
   let l7 = checkies[6];
   let l8 = checkies[7];
   let l9 = checkies[8];
+  let l10 = checkies[9];
 
-  let cs = [l1, l2, l3, l4, l5, l6, l7, l8, l9];
-  if (cs[3].checked) {
-    console.log("includes resources");
-    check(l5);
-    check(l6);
-    check(l7);
-    check(l8);
-    check(l9);
-  }
+  let cs = [l1, l2, l3, l4, l5, l6, l7, l8, l9, l10];
+//  if (cs[3].checked) {
+//    console.log("includes resources");
+//    check(l5);
+//    check(l6);
+//    check(l7);
+//    check(l8);
+//    check(l9);
+//  }
 
   cs.forEach(c => {
     if (c.checked === true) {
@@ -746,54 +747,269 @@ function onCheck() {
   }
 }
 
-function resourceCheck() {
-  if (!checkies[3].checked) {
-    console.log("resources unchecked");
+//function resourceCheck() {
+//  if (!checkies[3].checked) {
+//    console.log("resources unchecked");
+//    uncheck(checkies[4]);
+//    uncheck(checkies[5]);
+//    uncheck(checkies[6]);
+//    uncheck(checkies[7]);
+//    uncheck(checkies[8]);
+//    layerGroup.clearLayers();
+//  }
+//  onCheck();
+//}
+
+
+function TWTENCheck() {
+  if (checkies[0].checked) {
+    uncheck(checkies[1]);
+    uncheck(checkies[2]);
+    uncheck(checkies[3]);
     uncheck(checkies[4]);
     uncheck(checkies[5]);
     uncheck(checkies[6]);
     uncheck(checkies[7]);
     uncheck(checkies[8]);
-    layerGroup.clearLayers();
-  }
-  onCheck();
-}
-
-
-function HVICheck() {
-  if (checkies[0].checked) {
-    uncheck(checkies[1]);
-    uncheck(checkies[2]);
+    uncheck(checkies[9]);
     disable(checkies[1]);
     disable(checkies[2]);
+    disable(checkies[3]);
+    disable(checkies[4]);
+    disable(checkies[5]);
+    disable(checkies[6]);
+    disable(checkies[7]);
+    disable(checkies[8]);
+    disable(checkies[9]);
     layerGroup.clearLayers();
   }
   // onCheck();
 }
 
-function SVICheck() {
+function TWELECheck() {
   if (checkies[1].checked) {
     uncheck(checkies[0]);
     uncheck(checkies[2]);
+    uncheck(checkies[3]);
+    uncheck(checkies[4]);
+    uncheck(checkies[5]);
+    uncheck(checkies[6]);
+    uncheck(checkies[7]);
+    uncheck(checkies[8]);
+    uncheck(checkies[9]);
     disable(checkies[0]);
     disable(checkies[2]);
+    disable(checkies[3]);
+    disable(checkies[4]);
+    disable(checkies[5]);
+    disable(checkies[6]);
+    disable(checkies[7]);
+    disable(checkies[8]);
+    disable(checkies[9]);
     layerGroup.clearLayers();
   }
   // onCheck();
 }
 
-function PVICheck() {
+function TWTWECheck() {
   if (checkies[2].checked) {
     uncheck(checkies[0]);
     uncheck(checkies[1]);
-    disable(checkies[1]);
+    uncheck(checkies[3]);
+    uncheck(checkies[4]);
+    uncheck(checkies[5]);
+    uncheck(checkies[6]);
+    uncheck(checkies[7]);
+    uncheck(checkies[8]);
+    uncheck(checkies[9]);
     disable(checkies[0]);
+    disable(checkies[1]);
+    disable(checkies[3]);
+    disable(checkies[4]);
+    disable(checkies[5]);
+    disable(checkies[6]);
+    disable(checkies[7]);
+    disable(checkies[8]);
+    disable(checkies[9]);
     layerGroup.clearLayers();
   }
   // onCheck();
 }
 
+function TWTHICheck() {
+  if (checkies[3].checked) {
+    uncheck(checkies[0]);
+    uncheck(checkies[1]);
+    uncheck(checkies[2]);
+    uncheck(checkies[4]);
+    uncheck(checkies[5]);
+    uncheck(checkies[6]);
+    uncheck(checkies[7]);
+    uncheck(checkies[8]);
+    uncheck(checkies[9]);
+    disable(checkies[0]);
+    disable(checkies[1]);
+    disable(checkies[2]);
+    disable(checkies[4]);
+    disable(checkies[5]);
+    disable(checkies[6]);
+    disable(checkies[7]);
+    disable(checkies[8]);
+    disable(checkies[9]);
+    layerGroup.clearLayers();
+  }
+  // onCheck();
+}
 
+function TWFOUCheck() {
+  if (checkies[4].checked) {
+    uncheck(checkies[0]);
+    uncheck(checkies[1]);
+    uncheck(checkies[2]);
+    uncheck(checkies[3]);
+    uncheck(checkies[5]);
+    uncheck(checkies[6]);
+    uncheck(checkies[7]);
+    uncheck(checkies[8]);
+    uncheck(checkies[9]);
+    disable(checkies[0]);
+    disable(checkies[1]);
+    disable(checkies[2]);
+    disable(checkies[3]);
+    disable(checkies[5]);
+    disable(checkies[6]);
+    disable(checkies[7]);
+    disable(checkies[8]);
+    disable(checkies[9]);
+    layerGroup.clearLayers();
+  }
+  // onCheck();
+}
+
+function TWFIFCheck() {
+  if (checkies[5].checked) {
+    uncheck(checkies[0]);
+    uncheck(checkies[1]);
+    uncheck(checkies[2]);
+    uncheck(checkies[3]);
+    uncheck(checkies[4]);
+    uncheck(checkies[6]);
+    uncheck(checkies[7]);
+    uncheck(checkies[8]);
+    uncheck(checkies[9]);
+    disable(checkies[0]);
+    disable(checkies[1]);
+    disable(checkies[2]);
+    disable(checkies[3]);
+    disable(checkies[4]);
+    disable(checkies[6]);
+    disable(checkies[7]);
+    disable(checkies[8]);
+    disable(checkies[9]);
+    layerGroup.clearLayers();
+  }
+  // onCheck();
+}
+
+function TWSIXCheck() {
+  if (checkies[6].checked) {
+    uncheck(checkies[0]);
+    uncheck(checkies[1]);
+    uncheck(checkies[2]);
+    uncheck(checkies[3]);
+    uncheck(checkies[4]);
+    uncheck(checkies[5]);
+    uncheck(checkies[7]);
+    uncheck(checkies[8]);
+    uncheck(checkies[9]);
+    disable(checkies[0]);
+    disable(checkies[1]);
+    disable(checkies[2]);
+    disable(checkies[3]);
+    disable(checkies[4]);
+    disable(checkies[5]);
+    disable(checkies[7]);
+    disable(checkies[8]);
+    disable(checkies[9]);
+    layerGroup.clearLayers();
+  }
+  // onCheck();
+}
+
+function TWSEVCheck() {
+  if (checkies[7].checked) {
+    uncheck(checkies[0]);
+    uncheck(checkies[1]);
+    uncheck(checkies[2]);
+    uncheck(checkies[3]);
+    uncheck(checkies[4]);
+    uncheck(checkies[5]);
+    uncheck(checkies[6]);
+    uncheck(checkies[8]);
+    uncheck(checkies[9]);
+    disable(checkies[0]);
+    disable(checkies[1]);
+    disable(checkies[2]);
+    disable(checkies[3]);
+    disable(checkies[4]);
+    disable(checkies[5]);
+    disable(checkies[6]);
+    disable(checkies[8]);
+    disable(checkies[9]);
+    layerGroup.clearLayers();
+  }
+  // onCheck();
+}
+
+function TWEIGCheck() {
+  if (checkies[8].checked) {
+    uncheck(checkies[0]);
+    uncheck(checkies[1]);
+    uncheck(checkies[2]);
+    uncheck(checkies[3]);
+    uncheck(checkies[4]);
+    uncheck(checkies[5]);
+    uncheck(checkies[6]);
+    uncheck(checkies[7]);
+    uncheck(checkies[9]);
+    disable(checkies[0]);
+    disable(checkies[1]);
+    disable(checkies[2]);
+    disable(checkies[3]);
+    disable(checkies[4]);
+    disable(checkies[5]);
+    disable(checkies[6]);
+    disable(checkies[7]);
+    disable(checkies[9]);
+    layerGroup.clearLayers();
+  }
+  // onCheck();
+}
+
+function TWNINCheck() {
+  if (checkies[9].checked) {
+    uncheck(checkies[0]);
+    uncheck(checkies[1]);
+    uncheck(checkies[2]);
+    uncheck(checkies[3]);
+    uncheck(checkies[4]);
+    uncheck(checkies[5]);
+    uncheck(checkies[6]);
+    uncheck(checkies[7]);
+    uncheck(checkies[8]);
+    disable(checkies[0]);
+    disable(checkies[1]);
+    disable(checkies[2]);
+    disable(checkies[3]);
+    disable(checkies[4]);
+    disable(checkies[5]);
+    disable(checkies[6]);
+    disable(checkies[7]);
+    disable(checkies[8]);
+    layerGroup.clearLayers();
+  }
+  // onCheck();
+}
 
 
 
