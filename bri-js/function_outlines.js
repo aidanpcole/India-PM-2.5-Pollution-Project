@@ -62,7 +62,7 @@ const sidebarContentController = function (slide) {
       checkies[5],
       checkies[6],
       checkies[7],
-      checkies[8]
+      checkies[8],
       checkies[9]];
     let justLayers = [checkies[0], checkies[1], checkies[2], checkies[3], checkies[4], checkies[5], checkies[6], checkies[7], checkies[8], checkies[9]];
 
