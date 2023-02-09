@@ -26,23 +26,14 @@ const filterslide = {
   slide: 'filterSlide',
   content: `<div class="checkies">
   <h2><input type="checkbox" id="TWTEN" class="largerCheck"> &nbsp2010 PM 2.5</h2>
-  <ul>
   <h2><input type="checkbox" id="TWELE" class="largerCheck"> &nbsp2011 PM 2.5</h2>
-  <ul>
   <h2><input type="checkbox" id="TWTWE" class="largerCheck"> &nbsp2012 PM 2.5</h2>
-  <ul>
   <h2><input type="checkbox" id="TWTHI" class="largerCheck"> &nbsp2013 PM 2.5</h2>
-  <ul>
   <h2><input type="checkbox" id="TWFOU" class="largerCheck"> &nbsp2014 PM 2.5</h2>
-  <ul>
   <h2><input type="checkbox" id="TWFIF" class="largerCheck"> &nbsp2015 PM 2.5</h2>
-  <ul>
   <h2><input type="checkbox" id="TWSIX" class="largerCheck"> &nbsp2016 PM 2.5</h2>
-  <ul>
   <h2><input type="checkbox" id="TWSEV" class="largerCheck"> &nbsp2017 PM 2.5</h2>
-  <ul>
   <h2><input type="checkbox" id="TWEIG" class="largerCheck"> &nbsp2018 PM 2.5</h2>
-  <ul>
   <h2><input type="checkbox" id="TWNIN" class="largerCheck"> &nbsp2019 PM 2.5</h2>
   </ul>
  </div>`,
