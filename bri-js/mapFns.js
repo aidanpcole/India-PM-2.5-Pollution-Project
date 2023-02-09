@@ -5,16 +5,16 @@ dataT, showmeHistogram, addHistInput, checkies, showdown */
 let dlist;
 /* === MY DATA ON GITHUB === */
 const mapvars = {
-  TWTEN: "https://raw.githubusercontent.com/aidanpcole/India-PM-2.5-Pollution-Project/main/data/DataForMap/2010pm25.geojson",
-  TWELE: "https://raw.githubusercontent.com/aidanpcole/India-PM-2.5-Pollution-Project/main/data/DataForMap/2011pm25.geojson",
-  TWTWE: "https://raw.githubusercontent.com/aidanpcole/India-PM-2.5-Pollution-Project/main/data/DataForMap/2012pm25.geojson",
-  TWTHI: "https://raw.githubusercontent.com/aidanpcole/India-PM-2.5-Pollution-Project/main/data/DataForMap/2013pm25.geojson",
-  TWFOU: "https://raw.githubusercontent.com/aidanpcole/India-PM-2.5-Pollution-Project/main/data/DataForMap/2014pm25.geojson",
-  TWFIF: "https://raw.githubusercontent.com/aidanpcole/India-PM-2.5-Pollution-Project/main/data/DataForMap/2015pm25.geojson",
-  TWSIX: "https://raw.githubusercontent.com/aidanpcole/India-PM-2.5-Pollution-Project/main/data/DataForMap/2016pm25.geojson",
-  TWSEV: "https://raw.githubusercontent.com/aidanpcole/India-PM-2.5-Pollution-Project/main/data/DataForMap/2017pm25.geojson",
-  TWEIG: "https://raw.githubusercontent.com/aidanpcole/India-PM-2.5-Pollution-Project/main/data/DataForMap/2018pm25.geojson",
-  TWNIN: "https://raw.githubusercontent.com/aidanpcole/India-PM-2.5-Pollution-Project/main/data/DataForMap/2019pm25.geojson"
+  TWTEN: "https://raw.githubusercontent.com/aidanpcole/India-PM-2.5-Pollution-Project/tree/main/data/DataForMap/2010pm25.geojson",
+  TWELE: "https://raw.githubusercontent.com/aidanpcole/India-PM-2.5-Pollution-Project/tree/main/data/DataForMap/2011pm25.geojson",
+  TWTWE: "https://raw.githubusercontent.com/aidanpcole/India-PM-2.5-Pollution-Project/tree/main/data/DataForMap/2012pm25.geojson",
+  TWTHI: "https://raw.githubusercontent.com/aidanpcole/India-PM-2.5-Pollution-Project/tree/main/data/DataForMap/2013pm25.geojson",
+  TWFOU: "https://raw.githubusercontent.com/aidanpcole/India-PM-2.5-Pollution-Project/tree/main/data/DataForMap/2014pm25.geojson",
+  TWFIF: "https://raw.githubusercontent.com/aidanpcole/India-PM-2.5-Pollution-Project/tree/main/data/DataForMap/2015pm25.geojson",
+  TWSIX: "https://raw.githubusercontent.com/aidanpcole/India-PM-2.5-Pollution-Project/tree/main/data/DataForMap/2016pm25.geojson",
+  TWSEV: "https://raw.githubusercontent.com/aidanpcole/India-PM-2.5-Pollution-Project/tree/main/data/DataForMap/2017pm25.geojson",
+  TWEIG: "https://raw.githubusercontent.com/aidanpcole/India-PM-2.5-Pollution-Project/tree/main/data/DataForMap/2018pm25.geojson",
+  TWNIN: "https://raw.githubusercontent.com/aidanpcole/India-PM-2.5-Pollution-Project/tree/main/data/DataForMap/2019pm25.geojson"
 };
 
 //const pointLayers = ["coolingCenters", "emergencyP", "pools", "parks", "hosp"]; // i think this needs to be a dictionary
