@@ -120,7 +120,7 @@ function showmeHistogram(column, districtID) {
 }
 
 
-function getTractID() {
+function getDistrictID() {
   h.length = 0;
   const districtnum = document.getElementById("districtenter").value;
   let col = colly;

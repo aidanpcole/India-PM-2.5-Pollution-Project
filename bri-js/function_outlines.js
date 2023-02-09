@@ -76,7 +76,7 @@ const sidebarContentController = function (slide) {
     checkies[7].addEventListener("change", TWSEVCheck);
     checkies[8].addEventListener("change", TWEIGCheck);
     checkies[9].addEventListener("change", TWNINCheck);
-    allButResources.forEach(abr => abr.addEventListener("change", onCheck));
+//    allButResources.forEach(abr => abr.addEventListener("change", onCheck));
     layerGroup.clearLayers();
     checkies[0].click();
   }
@@ -111,6 +111,7 @@ sidebar.addEventListener('click', ({ target }) => {
   }
 });
 /* global sidebar, slideContentDiv, slideTitleDiv,
-layerGroup, resourceCheck, onCheck,
-PVICheck, SVICheck, HVICheck, slides,
+layerGroup, onCheck,
+TWTENCheck, TWELECheck, TWTWECheck, TWTHICheck, TWFOUCheck,
+TWFIFCheck, TWSIXCheck, TWSEVCheck, TWEIGCheck, TWNINCheck, slides,
 openItemArrow, showdown */
