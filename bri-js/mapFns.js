@@ -1,24 +1,24 @@
-/* global layerGroup, map, PVIlegend, SVIlegend,
-HVIlegend, getTableData, getLegend,
-sidebarContentController, intialTableData,
+/* global layerGroup, map, TWTENlegend, TWELElegend, TWTWElegend, TWTHIlegend,
+TWFOUlegend, TWFIFlegend, TWSIXlegend, TWSEVlegend, TWEIGlegend, TWNINlegend,
+getTableData, getLegend, sidebarContentController, intialTableData,
 dataT, showmeHistogram, addHistInput, checkies, showdown */
 let dlist;
 /* === OUR DATA ON GITHUB === */
 const mapvars = {
-  coolingCenters: "https://raw.githubusercontent.com/bri-ne/MUSA611-Final/main/data/DataForMap/newestData/newestcoolingcenters.geojson",
-  emergencyP: "https://raw.githubusercontent.com/bri-ne/MUSA611-Final/main/data/DataForMap/newestData/newestemergencyprep.geojson",
-  pools: "https://raw.githubusercontent.com/bri-ne/MUSA611-Final/main/data/DataForMap/newestData/newestpublicpools.geojson",
-  parks: "https://raw.githubusercontent.com/bri-ne/MUSA611-Final/main/data/DataForMap/newestData/newestparksandgs.geojson",
-  hosp: "https://raw.githubusercontent.com/bri-ne/MUSA611-Final/main/data/DataForMap/newestData/newesthospitals.geojson",
-  HVI: "https://raw.githubusercontent.com/bri-ne/MUSA611-Final/main/data/DataForMap/newestData/newestoverallvulnerability.geojson",
-  PVI: "https://raw.githubusercontent.com/bri-ne/MUSA611-Final/main/data/DataForMap/newestData/newestphysicalvulnerability.geojson",
-  SVI: "https://raw.githubusercontent.com/bri-ne/MUSA611-Final/main/data/DataForMap/newestData/newestsocialvulnerability.geojson"
+  TWTEN: "https://raw.githubusercontent.com/aidanpcole/India-PM-2.5-Pollution-Project/main/data/DataForMap/2010pm25.geojson",
+  TWELE: "https://raw.githubusercontent.com/aidanpcole/India-PM-2.5-Pollution-Project/main/data/DataForMap/2011pm25.geojson",
+  TWTWE: "https://raw.githubusercontent.com/aidanpcole/India-PM-2.5-Pollution-Project/main/data/DataForMap/2012pm25.geojson",
+  TWTHI: "https://raw.githubusercontent.com/aidanpcole/India-PM-2.5-Pollution-Project/main/data/DataForMap/2013pm25.geojson",
+  TWFOU: "https://raw.githubusercontent.com/aidanpcole/India-PM-2.5-Pollution-Project/main/data/DataForMap/2014pm25.geojson",
+  TWFIF: "https://raw.githubusercontent.com/aidanpcole/India-PM-2.5-Pollution-Project/main/data/DataForMap/2015pm25.geojson",
+  TWSIX: "https://raw.githubusercontent.com/aidanpcole/India-PM-2.5-Pollution-Project/main/data/DataForMap/2016pm25.geojson",
+  TWSEV: "https://raw.githubusercontent.com/aidanpcole/India-PM-2.5-Pollution-Project/main/data/DataForMap/2017pm25.geojson",
+  TWEIG: "https://raw.githubusercontent.com/aidanpcole/India-PM-2.5-Pollution-Project/main/data/DataForMap/2018pm25.geojson",
+  TWNIN: "https://raw.githubusercontent.com/aidanpcole/India-PM-2.5-Pollution-Project/main/data/DataForMap/2019pm25.geojson"
 };
 
-
-
-const pointLayers = ["coolingCenters", "emergencyP", "pools", "parks", "hosp"]; // i think this needs to be a dictionary
-const polygonLayers = ["HVI", "PVI", "SVI"]; // with string name and var
+//const pointLayers = ["coolingCenters", "emergencyP", "pools", "parks", "hosp"]; // i think this needs to be a dictionary
+const polygonLayers = ["TWTEN", "TWELE", "TWTWE", "TWTHI", "TWFOU", "TWFIF", "TWSIX", "TWSEV", "TWEIG", "TWNIN"]; // with string name and var
 
 
 
@@ -385,9 +385,16 @@ const stylevars = {
 };
 
 const bindingsvars = {
-  HVI: onEachFeatureHVI,
-  PVI: onEachFeaturePVI,
-  SVI: onEachFeatureSVI
+  TWTEN: onEachFeatureTWTEN,
+  TWELE: onEachFeatureTWELE,
+  TWTWE: onEachFeatureTWTWE,
+  TWTHI: onEachFeatureTWTHI,
+  TWFOU: onEachFeatureTWFOU,
+  TWFIF: onEachFeatureTWFIF,
+  TWSIX: onEachFeatureTWSIX,
+  TWSEV: onEachFeatureTWSEV,
+  TWEIG: onEachFeatureTWEIG,
+  TWNIN: onEachFeatureTWNIN
 };
 // === Updating the Map === //
 
@@ -410,51 +417,51 @@ function updateMap(url, styleType, bindings, callback) {
 }
 
 // === markers ===//
-const parksIcon = new L.Icon({
-  iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-green.png',
-  shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
-  iconSize: [25, 41],
-  iconAnchor: [12, 41],
-  popupAnchor: [1, -34],
-  shadowSize: [41, 41]
-});
+//const parksIcon = new L.Icon({
+//  iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-green.png',
+//  shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+//  iconSize: [25, 41],
+//  iconAnchor: [12, 41],
+//  popupAnchor: [1, -34],
+//  shadowSize: [41, 41]
+//});
 
-const poolsIcon = new L.Icon({
-  iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-blue.png',
-  shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
-  iconSize: [25, 41],
-  iconAnchor: [12, 41],
-  popupAnchor: [1, -34],
-  shadowSize: [41, 41]
-});
+//const poolsIcon = new L.Icon({
+//  iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-blue.png',
+//  shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+//  iconSize: [25, 41],
+//  iconAnchor: [12, 41],
+//  popupAnchor: [1, -34],
+//  shadowSize: [41, 41]
+//});
 
-const emergencyPIcon = new L.Icon({
-  iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-gold.png',
-  shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
-  iconSize: [25, 41],
-  iconAnchor: [12, 41],
-  popupAnchor: [1, -34],
-  shadowSize: [41, 41]
-});
+//const emergencyPIcon = new L.Icon({
+//  iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-gold.png',
+//  shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+//  iconSize: [25, 41],
+//  iconAnchor: [12, 41],
+//  popupAnchor: [1, -34],
+//  shadowSize: [41, 41]
+//});
 
-const coolingCentersIcon = new L.Icon({
-  iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-violet.png',
-  shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
-  iconSize: [25, 41],
-  iconAnchor: [12, 41],
-  popupAnchor: [1, -34],
-  shadowSize: [41, 41]
-});
+//const coolingCentersIcon = new L.Icon({
+//  iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-violet.png',
+//  shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+//  iconSize: [25, 41],
+//  iconAnchor: [12, 41],
+//  popupAnchor: [1, -34],
+//  shadowSize: [41, 41]
+//});
 
 
-const hospIcon = new L.Icon({
-  iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-grey.png',
-  shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
-  iconSize: [25, 41],
-  iconAnchor: [12, 41],
-  popupAnchor: [1, -34],
-  shadowSize: [41, 41]
-});
+//const hospIcon = new L.Icon({
+//  iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-grey.png',
+//  shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+//  iconSize: [25, 41],
+//  iconAnchor: [12, 41],
+//  popupAnchor: [1, -34],
+//  shadowSize: [41, 41]
+//});
 
 
 function getMarker(pointName) {
@@ -480,93 +487,93 @@ function getMarker(pointName) {
 
 
 
-function updateMappointPCH(url, name, callback) { // THIS IS for pools, cooling centers and hosp
-  layerGroup.clearLayers();
-  let iconuse;
-  let markersClust = new L.MarkerClusterGroup();
-  iconuse = getMarker(name);
-  fetch(url)
-    .then(resp => resp.json())
-    .then(data => {
-      L.geoJSON(data, {
-        onEachFeature(feature) {
-          let popupContent = `<h4> ${feature.properties.Name} </h4>
-        <p>Address: ${feature.properties.addrln1}  &nbsp ${feature.properties.zip} <br>
-        Hours: ${feature.properties.hours} <br>
-        Phone Number: ${feature.properties.phones} <br>
-        Website: <a href="${feature.properties.url}">${feature.properties.url} </a> </p>`;
-          let marker = L.marker(
-            [feature.geometry.coordinates[1], feature.geometry.coordinates[0]],
-            { icon: iconuse }
-          ).bindPopup(popupContent);
-          markersClust.addLayer(marker);
-        }
-      });
-      markersClust.addTo(layerGroup);
-    });
-  if (callback) {
-    callback();
-  }
-}
+//function updateMappointPCH(url, name, callback) { // THIS IS for pools, cooling centers and hosp
+//  layerGroup.clearLayers();
+//  let iconuse;
+//  let markersClust = new L.MarkerClusterGroup();
+//  iconuse = getMarker(name);
+//  fetch(url)
+//    .then(resp => resp.json())
+//    .then(data => {
+//      L.geoJSON(data, {
+//        onEachFeature(feature) {
+//          let popupContent = `<h4> ${feature.properties.Name} </h4>
+//        <p>Address: ${feature.properties.addrln1}  &nbsp ${feature.properties.zip} <br>
+//        Hours: ${feature.properties.hours} <br>
+//        Phone Number: ${feature.properties.phones} <br>
+//        Website: <a href="${feature.properties.url}">${feature.properties.url} </a> </p>`;
+//          let marker = L.marker(
+//            [feature.geometry.coordinates[1], feature.geometry.coordinates[0]],
+//            { icon: iconuse }
+//          ).bindPopup(popupContent);
+//          markersClust.addLayer(marker);
+//        }
+//      });
+//      markersClust.addTo(layerGroup);
+//    });
+//  if (callback) {
+//    callback();
+//  }
+//}
 
-function updateMappointEmergency(url, name, callback) {
+//function updateMappointEmergency(url, name, callback) {
   // THIS IS for pools, cooling centers and hosp
-  layerGroup.clearLayers();
-  let iconuse;
-  let markersClust = new L.MarkerClusterGroup();
-  iconuse = getMarker(name);
-  fetch(url)
-    .then(resp => resp.json())
-    .then(data => {
-      L.geoJSON(data, {
-        onEachFeature(feature) { // THIS IS only for emergencyP
-          let popupContent = `<h4>${feature.properties.Name} </h4>
-        <p>Address: ${feature.properties.addrln1}  &nbsp ${feature.properties.zip} <br>
-        Phone Number: ${feature.properties.phones} <br>
-        Website: <a href="${feature.properties.url}">${feature.properties.url} </a></p>`;
-          let marker = L.marker(
-            [feature.geometry.coordinates[1], feature.geometry.coordinates[0]],
-            { icon: iconuse }
-          ).bindPopup(popupContent);
-          markersClust.addLayer(marker);
-        }
-      });
-      markersClust.addTo(layerGroup);
-    });
-  if (callback) {
-    callback();
-  }
-}
+//  layerGroup.clearLayers();
+//  let iconuse;
+//  let markersClust = new L.MarkerClusterGroup();
+//  iconuse = getMarker(name);
+//  fetch(url)
+//    .then(resp => resp.json())
+//    .then(data => {
+//      L.geoJSON(data, {
+//        onEachFeature(feature) { // THIS IS only for emergencyP
+//          let popupContent = `<h4>${feature.properties.Name} </h4>
+//        <p>Address: ${feature.properties.addrln1}  &nbsp ${feature.properties.zip} <br>
+//        Phone Number: ${feature.properties.phones} <br>
+//        Website: <a href="${feature.properties.url}">${feature.properties.url} </a></p>`;
+//          let marker = L.marker(
+//            [feature.geometry.coordinates[1], feature.geometry.coordinates[0]],
+//            { icon: iconuse }
+//          ).bindPopup(popupContent);
+//          markersClust.addLayer(marker);
+//        }
+//      });
+//      markersClust.addTo(layerGroup);
+//    });
+//  if (callback) {
+//    callback();
+//  }
+//}
 
 
 
-function updateMappointParks(url, name, callback) { // THIS IS only for parks
-  layerGroup.clearLayers();
-  let iconuse;
-  let markersClust = new L.MarkerClusterGroup();
-  iconuse = getMarker(name);
-  fetch(url)
-    .then(resp => resp.json())
-    .then(data => {
-      L.geoJSON(data, {
-        onEachFeature(feature) {    // THIS IS only for emergencyP
-          let popupContent = `<h4> ${feature.properties.Name} </h4>
-        <p>Address: ${feature.properties.ADDRESS} &nbsp ${feature.properties.CITY} &nbsp ${feature.properties.ZIP} <br>
-        Phone Number: ${feature.properties.PHONES} <br>
-        Website: <a href="${feature.properties.AGNCY_WEB}">${feature.properties.AGNCY_WEB} </a></p>`;
-          let marker = L.marker(
-            [feature.geometry.coordinates[1], feature.geometry.coordinates[0]],
-            { icon: iconuse }
-          ).bindPopup(popupContent);
-          markersClust.addLayer(marker);
-        }
-      });
-      markersClust.addTo(layerGroup);
-    });
-  if (callback) {
-    callback();
-  }
-}
+//function updateMappointParks(url, name, callback) { // THIS IS only for parks
+//  layerGroup.clearLayers();
+//  let iconuse;
+//  let markersClust = new L.MarkerClusterGroup();
+//  iconuse = getMarker(name);
+//  fetch(url)
+//    .then(resp => resp.json())
+//    .then(data => {
+//      L.geoJSON(data, {
+//        onEachFeature(feature) {    // THIS IS only for emergencyP
+//          let popupContent = `<h4> ${feature.properties.Name} </h4>
+//        <p>Address: ${feature.properties.ADDRESS} &nbsp ${feature.properties.CITY} &nbsp ${feature.properties.ZIP} <br>
+//        Phone Number: ${feature.properties.PHONES} <br>
+//        Website: <a href="${feature.properties.AGNCY_WEB}">${feature.properties.AGNCY_WEB} </a></p>`;
+//          let marker = L.marker(
+//            [feature.geometry.coordinates[1], feature.geometry.coordinates[0]],
+//            { icon: iconuse }
+//          ).bindPopup(popupContent);
+//          markersClust.addLayer(marker);
+//        }
+//      });
+//      markersClust.addTo(layerGroup);
+//    });
+//  if (callback) {
+//    callback();
+//  }
+//}
 
 
 // getridof fn below
@@ -597,8 +604,8 @@ function emptyCallback() {
 
 
 function initializeMap(callback) {
-  updateMap(mapvars.HVI, styleHVI, onEachFeatureHVI, intialTableData);
-  getLegend("HVI");
+  updateMap(mapvars.TWTEN, styleTWTEN, onEachFeatureTWTEN, intialTableData);
+  getLegend("TWTEN");
   sidebarContentController("story-slide");
   if (callback) {
     callback();
@@ -665,16 +672,37 @@ function determineMap() {
   });
 }
 
-
+//checkies 3 and onward not incorporated in original
 function anyChecked() {
   if (!checkies[0].checked) {
-    map.removeControl(HVIlegend);
+    map.removeControl(TWTENlegend);
   }
   if (!checkies[1].checked) {
-    map.removeControl(SVIlegend);
+    map.removeControl(TWELElegend);
   }
   if (!checkies[2].checked) {
-    map.removeControl(PVIlegend);
+    map.removeControl(TWTWElegend);
+  }
+  if (!checkies[3].checked) {
+    map.removeControl(TWTHIlegend);
+  }
+  if (!checkies[4].checked) {
+    map.removeControl(TWFOUlegend);
+  }
+  if (!checkies[5].checked) {
+    map.removeControl(TWFIFlegend);
+  }
+  if (!checkies[6].checked) {
+    map.removeControl(TWSIXlegend);
+  }
+  if (!checkies[7].checked) {
+    map.removeControl(TWSEVlegend);
+  }
+  if (!checkies[8].checked) {
+    map.removeControl(TWEIGlegend);
+  }
+  if (!checkies[9].checked) {
+    map.removeControl(TWNINlegend)
   }
 
   let trues = [];

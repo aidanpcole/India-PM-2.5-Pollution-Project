@@ -4,13 +4,34 @@ function getTableData(callback1, callback2) {
   dataT.length = 0;
   dlist.features.forEach(ele => dataT.push(ele.properties)); // creates dataT
   if (checkies[0].checked) {
-    colly = "Total Vulnerability Score";
+    colly = "2010 PM 2.5";
   }
   if (checkies[1].checked) {
-    colly = "Social Vulnerability Score";
+    colly = "2011 PM 2.5";
   }
   if (checkies[2].checked) {
-    colly = "Physical Vulnerability Score";
+    colly = "2012 PM 2.5";
+  }
+  if (checkies[3].checked) {
+    colly = "2013 PM 2.5";
+  }
+  if (checkies[4].checked) {
+    colly = "2014 PM 2.5";
+  }
+  if (checkies[5].checked) {
+    colly = "2015 PM 2.5";
+  }
+  if (checkies[6].checked) {
+    colly = "2016 PM 2.5";
+  }
+  if (checkies[7].checked) {
+    colly = "2017 PM 2.5";
+  }
+  if (checkies[8].checked) {
+    colly = "2018 PM 2.5";
+  }
+  if (checkies[9].checked) {
+    colly = "2019 PM 2.5";
   }
   if (callback1) {
     callback1();
