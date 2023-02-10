@@ -117,95 +117,95 @@ ggplot() +
   mapTheme()
 
 Complete2010 <- pollution2010 %>%
-  mutate("State Name" = statename,
-         "District Name" = distname,
+  mutate("State" = statename,
+         "District" = distname,
          "Total Population" = totalpopul,
          "Average PM 2.5 Concentration" = round(grid_code, digits=2),
          "PM 2.5 Concentration Quantile" = ntile(pollution2010$grid_code,5)) %>%
-  dplyr::select("State Name","District Name","Total Population","Average PM 2.5 Concentration","PM 2.5 Concentration Quantile")
+  dplyr::select("State","District","Total Population","Average PM 2.5 Concentration","PM 2.5 Concentration Quantile")
 
 Complete2011 <- pollution2011 %>%
-  mutate("State Name" = statename,
-         "District Name" = distname,
+  mutate("State" = statename,
+         "District" = distname,
          "Total Population" = totalpopul,
          "Average PM 2.5 Concentration" = round(grid_code, digits=2),
          "PM 2.5 Concentration Quantile" = ntile(pollution2011$grid_code,5)) %>%
-  dplyr::select("State Name","District Name","Total Population","Average PM 2.5 Concentration","PM 2.5 Concentration Quantile")
+  dplyr::select("State","District","Total Population","Average PM 2.5 Concentration","PM 2.5 Concentration Quantile")
 
 Complete2012 <- pollution2012 %>%
-  mutate("State Name" = statename,
-         "District Name" = distname,
+  mutate("State" = statename,
+         "District" = distname,
          "Total Population" = totalpopul,
          "Average PM 2.5 Concentration" = round(grid_code, digits=2),
          "PM 2.5 Concentration Quantile" = ntile(pollution2012$grid_code,5)) %>%
-  dplyr::select("State Name","District Name","Total Population","Average PM 2.5 Concentration","PM 2.5 Concentration Quantile")
+  dplyr::select("State","District","Total Population","Average PM 2.5 Concentration","PM 2.5 Concentration Quantile")
 
 Complete2013 <- pollution2013 %>%
-  mutate("State Name" = statename,
-         "District Name" = distname,
+  mutate("State" = statename,
+         "District" = distname,
          "Total Population" = totalpopul,
          "Average PM 2.5 Concentration" = round(grid_code, digits=2),
          "PM 2.5 Concentration Quantile" = ntile(pollution2013$grid_code,5)) %>%
-  dplyr::select("State Name","District Name","Total Population","Average PM 2.5 Concentration","PM 2.5 Concentration Quantile")
+  dplyr::select("State","District","Total Population","Average PM 2.5 Concentration","PM 2.5 Concentration Quantile")
 
 Complete2014 <- pollution2014 %>%
-  mutate("State Name" = statename,
-         "District Name" = distname,
+  mutate("State" = statename,
+         "District" = distname,
          "Total Population" = totalpopul,
          "Average PM 2.5 Concentration" = round(grid_code, digits=2),
          "PM 2.5 Concentration Quantile" = ntile(pollution2014$grid_code,5)) %>%
-  dplyr::select("State Name","District Name","Total Population","Average PM 2.5 Concentration","PM 2.5 Concentration Quantile")
+  dplyr::select("State","District","Total Population","Average PM 2.5 Concentration","PM 2.5 Concentration Quantile")
 
 Complete2015 <- pollution2015 %>%
-  mutate("State Name" = statename,
-         "District Name" = distname,
+  mutate("State" = statename,
+         "District" = distname,
          "Total Population" = totalpopul,
          "Average PM 2.5 Concentration" = round(grid_code, digits=2),
          "PM 2.5 Concentration Quantile" = ntile(pollution2015$grid_code,5)) %>%
-  dplyr::select("State Name","District Name","Total Population","Average PM 2.5 Concentration","PM 2.5 Concentration Quantile")
+  dplyr::select("State","District","Total Population","Average PM 2.5 Concentration","PM 2.5 Concentration Quantile")
 
 Complete2016 <- pollution2016 %>%
-  mutate("State Name" = statename,
-         "District Name" = distname,
+  mutate("State" = statename,
+         "District" = distname,
          "Total Population" = totalpopul,
          "Average PM 2.5 Concentration" = round(grid_code, digits=2),
          "PM 2.5 Concentration Quantile" = ntile(pollution2016$grid_code,5)) %>%
-  dplyr::select("State Name","District Name","Total Population","Average PM 2.5 Concentration","PM 2.5 Concentration Quantile")
+  dplyr::select("State","District","Total Population","Average PM 2.5 Concentration","PM 2.5 Concentration Quantile")
 
 Complete2017 <- pollution2017 %>%
-  mutate("State Name" = statename,
-         "District Name" = distname,
+  mutate("State" = statename,
+         "District" = distname,
          "Total Population" = totalpopul,
          "Average PM 2.5 Concentration" = round(grid_code, digits=2),
          "PM 2.5 Concentration Quantile" = ntile(pollution2017$grid_code,5)) %>%
-  dplyr::select("State Name","District Name","Total Population","Average PM 2.5 Concentration","PM 2.5 Concentration Quantile")
+  dplyr::select("State","District","Total Population","Average PM 2.5 Concentration","PM 2.5 Concentration Quantile")
 
 Complete2018 <- pollution2018 %>%
-  mutate("State Name" = statename,
-         "District Name" = distname,
+  mutate("State" = statename,
+         "District" = distname,
          "Total Population" = totalpopul,
          "Average PM 2.5 Concentration" = round(grid_code, digits=2),
          "PM 2.5 Concentration Quantile" = ntile(pollution2018$grid_code,5)) %>%
-  dplyr::select("State Name","District Name","Total Population","Average PM 2.5 Concentration","PM 2.5 Concentration Quantile")
+  dplyr::select("State","District","Total Population","Average PM 2.5 Concentration","PM 2.5 Concentration Quantile")
 
 Complete2019 <- pollution2019 %>%
-  mutate("State Name" = statename,
-         "District Name" = distname,
+  mutate("State" = statename,
+         "District" = distname,
          "Total Population" = totalpopul,
          "Average PM 2.5 Concentration" = round(grid_code, digits=2),
          "PM 2.5 Concentration Quantile" = ntile(pollution2019$grid_code,5)) %>%
-  dplyr::select("State Name","District Name","Total Population","Average PM 2.5 Concentration","PM 2.5 Concentration Quantile")
+  dplyr::select("State","District","Total Population","Average PM 2.5 Concentration","PM 2.5 Concentration Quantile")
 
-st_write(Complete2010, "/Users/Aidan/Desktop/India Pollution Project/India-PM-2.5-Pollution-Project/data/DataForMap/2010pm25.geojson")
-st_write(Complete2011, "/Users/Aidan/Desktop/India Pollution Project/India-PM-2.5-Pollution-Project/data/DataForMap/2011pm25.geojson")
-st_write(Complete2012, "/Users/Aidan/Desktop/India Pollution Project/India-PM-2.5-Pollution-Project/data/DataForMap/2012pm25.geojson")
-st_write(Complete2013, "/Users/Aidan/Desktop/India Pollution Project/India-PM-2.5-Pollution-Project/data/DataForMap/2013pm25.geojson")
-st_write(Complete2014, "/Users/Aidan/Desktop/India Pollution Project/India-PM-2.5-Pollution-Project/data/DataForMap/2014pm25.geojson")
-st_write(Complete2015, "/Users/Aidan/Desktop/India Pollution Project/India-PM-2.5-Pollution-Project/data/DataForMap/2015pm25.geojson")
-st_write(Complete2016, "/Users/Aidan/Desktop/India Pollution Project/India-PM-2.5-Pollution-Project/data/DataForMap/2016pm25.geojson")
-st_write(Complete2017, "/Users/Aidan/Desktop/India Pollution Project/India-PM-2.5-Pollution-Project/data/DataForMap/2017pm25.geojson")
-st_write(Complete2018, "/Users/Aidan/Desktop/India Pollution Project/India-PM-2.5-Pollution-Project/data/DataForMap/2018pm25.geojson")
-st_write(Complete2019, "/Users/Aidan/Desktop/India Pollution Project/India-PM-2.5-Pollution-Project/data/DataForMap/2019pm25.geojson")
+st_write(Complete2010, "/Users/Aidan/Desktop/India Pollution Project/India-PM-2.5-Pollution-Project/data/DataForMap/new2010pm25.geojson")
+st_write(Complete2011, "/Users/Aidan/Desktop/India Pollution Project/India-PM-2.5-Pollution-Project/data/DataForMap/new2011pm25.geojson")
+st_write(Complete2012, "/Users/Aidan/Desktop/India Pollution Project/India-PM-2.5-Pollution-Project/data/DataForMap/new2012pm25.geojson")
+st_write(Complete2013, "/Users/Aidan/Desktop/India Pollution Project/India-PM-2.5-Pollution-Project/data/DataForMap/new2013pm25.geojson")
+st_write(Complete2014, "/Users/Aidan/Desktop/India Pollution Project/India-PM-2.5-Pollution-Project/data/DataForMap/new2014pm25.geojson")
+st_write(Complete2015, "/Users/Aidan/Desktop/India Pollution Project/India-PM-2.5-Pollution-Project/data/DataForMap/new2015pm25.geojson")
+st_write(Complete2016, "/Users/Aidan/Desktop/India Pollution Project/India-PM-2.5-Pollution-Project/data/DataForMap/new2016pm25.geojson")
+st_write(Complete2017, "/Users/Aidan/Desktop/India Pollution Project/India-PM-2.5-Pollution-Project/data/DataForMap/new2017pm25.geojson")
+st_write(Complete2018, "/Users/Aidan/Desktop/India Pollution Project/India-PM-2.5-Pollution-Project/data/DataForMap/new2018pm25.geojson")
+st_write(Complete2019, "/Users/Aidan/Desktop/India Pollution Project/India-PM-2.5-Pollution-Project/data/DataForMap/new2019pm25.geojson")
 
 
 
