@@ -261,7 +261,7 @@ function getColorTWNIN(d) {
 // === Style  === //
 function styleTWTEN(feature) {
   return {
-    fillColor: getColorTWTEN(feature.properties["2010 PM 2.5 Concentration Quantile"]),
+    fillColor: getColorTWTEN(feature.properties["PM 2.5 Concentration Quantile"]),
     weight: 0.5,
     opacity: 0.7,
     color: "gray",
@@ -272,7 +272,7 @@ function styleTWTEN(feature) {
 
 function styleTWELE(feature) {
   return {
-    fillColor: getColorTWELE(feature.properties["2011 PM 2.5 Concentration Quantile"]),
+    fillColor: getColorTWELE(feature.properties["PM 2.5 Concentration Quantile"]),
     weight: 0.5,
     opacity: 0.7,
     color: "gray",
@@ -283,7 +283,7 @@ function styleTWELE(feature) {
 
 function styleTWTWE(feature) {
   return {
-    fillColor: getColorTWTWE(feature.properties["2012 PM 2.5 Concentration Quantile"]),
+    fillColor: getColorTWTWE(feature.properties["PM 2.5 Concentration Quantile"]),
     weight: 0.5,
     opacity: 0.7,
     color: "gray",
@@ -294,7 +294,7 @@ function styleTWTWE(feature) {
 
 function styleTWTHI(feature) {
   return {
-    fillColor: getColorTWTHI(feature.properties["2013 PM 2.5 Concentration Quantile"]),
+    fillColor: getColorTWTHI(feature.properties["PM 2.5 Concentration Quantile"]),
     weight: 0.5,
     opacity: 0.7,
     color: "gray",
@@ -305,7 +305,7 @@ function styleTWTHI(feature) {
 
 function styleTWFOU(feature) {
   return {
-    fillColor: getColorTWFOU(feature.properties["2014 PM 2.5 Concentration Quantile"]),
+    fillColor: getColorTWFOU(feature.properties["PM 2.5 Concentration Quantile"]),
     weight: 0.5,
     opacity: 0.7,
     color: "gray",
@@ -316,7 +316,7 @@ function styleTWFOU(feature) {
 
 function styleTWFIF(feature) {
   return {
-    fillColor: getColorTWFIF(feature.properties["2015 PM 2.5 Concentration Quantile"]),
+    fillColor: getColorTWFIF(feature.properties["PM 2.5 Concentration Quantile"]),
     weight: 0.5,
     opacity: 0.7,
     color: "gray",
@@ -327,7 +327,7 @@ function styleTWFIF(feature) {
 
 function styleTWSIX(feature) {
   return {
-    fillColor: getColorTWSIX(feature.properties["2016 PM 2.5 Concentration Quantile"]),
+    fillColor: getColorTWSIX(feature.properties["PM 2.5 Concentration Quantile"]),
     weight: 0.5,
     opacity: 0.7,
     color: "gray",
@@ -338,7 +338,7 @@ function styleTWSIX(feature) {
 
 function styleTWSEV(feature) {
   return {
-    fillColor: getColorTWSEV(feature.properties["2017 PM 2.5 Concentration Quantile"]),
+    fillColor: getColorTWSEV(feature.properties["PM 2.5 Concentration Quantile"]),
     weight: 0.5,
     opacity: 0.7,
     color: "gray",
@@ -349,7 +349,7 @@ function styleTWSEV(feature) {
 
 function styleTWEIG(feature) {
   return {
-    fillColor: getColorTWEIG(feature.properties["2018 PM 2.5 Concentration Quantile"]),
+    fillColor: getColorTWEIG(feature.properties["PM 2.5 Concentration Quantile"]),
     weight: 0.5,
     opacity: 0.7,
     color: "gray",
@@ -360,7 +360,7 @@ function styleTWEIG(feature) {
 
 function styleTWNIN(feature) {
   return {
-    fillColor: getColorTWNIN(feature.properties["2019 PM 2.5 Concentration Quantile"]),
+    fillColor: getColorTWNIN(feature.properties["PM 2.5 Concentration Quantile"]),
     weight: 0.5,
     opacity: 0.7,
     color: "gray",
