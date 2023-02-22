@@ -68,7 +68,7 @@ let h = [];
 let ishere;
 let trace = {};
 
-function showmeHistogram(column, districtID) {
+function showmeHistogram(column, stateID) {
   // document.querySelector("#histHere").innerHTML = ""
 
   let x = [];
@@ -89,7 +89,7 @@ function showmeHistogram(column, districtID) {
   };
   console.log(x);
 
-  if (districtID) {
+  if (stateID) {
     let datahist = [trace];
     layout = {
       title: `Distribution of ${column}`,
@@ -120,15 +120,15 @@ function showmeHistogram(column, districtID) {
 }
 
 
-function getDistrictID() {
+function getStateID() {
   h.length = 0;
-  const districtnum = document.getElementById("districtenter").value;
+  const statenum = document.getElementById("stateenter").value;
   let col = colly;
-  let districtID;
-  districtID = districtnum;
-  dataT.forEach(d => { if (d.District === String(districtID)) { h.push(d[col]); } });
+  let stateID;
+  stateID = statenum;
+  dataT.forEach(d => { if (d.Name === String(stateID)) { h.push(d[col]); } });
 
-  showmeHistogram(col, districtID);
+  showmeHistogram(col, stateID);
 }
 function addHistInput() {
   // create input box and histogram place
@@ -137,11 +137,11 @@ function addHistInput() {
   const inputEnterButton = document.createElement("button");
   const inputcontainer = document.createElement("div");
   input.setAttribute("type", "text");
-  input.setAttribute("placeholder", "Search For a District");
-  input.setAttribute("id", "districtenter");
-  inputEnterButton.setAttribute("id", "districtButton");
-  inputEnterButton.innerHTML = "Search District";
-  inputEnterButton.addEventListener("click", getDistrictID);
+  input.setAttribute("placeholder", "Search For a State");
+  input.setAttribute("id", "stateenter");
+  inputEnterButton.setAttribute("id", "stateButton");
+  inputEnterButton.innerHTML = "Search State";
+  inputEnterButton.addEventListener("click", getStateID);
 
   hist.setAttribute('id', 'histHere');
   // locate elements

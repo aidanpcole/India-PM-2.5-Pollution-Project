@@ -5,16 +5,16 @@ dataT, showmeHistogram, addHistInput, checkies, showdown */
 let dlist;
 /* === MY DATA ON GITHUB === */
 const mapvars = {
-  TWTEN: "https://raw.githubusercontent.com/aidanpcole/India-PM-2.5-Pollution-Project/main/data/DataForMap/new2010pm25.geojson",
-  TWELE: "https://raw.githubusercontent.com/aidanpcole/India-PM-2.5-Pollution-Project/main/data/DataForMap/new2011pm25.geojson",
-  TWTWE: "https://raw.githubusercontent.com/aidanpcole/India-PM-2.5-Pollution-Project/main/data/DataForMap/new2012pm25.geojson",
-  TWTHI: "https://raw.githubusercontent.com/aidanpcole/India-PM-2.5-Pollution-Project/main/data/DataForMap/new2013pm25.geojson",
-  TWFOU: "https://raw.githubusercontent.com/aidanpcole/India-PM-2.5-Pollution-Project/main/data/DataForMap/new2014pm25.geojson",
-  TWFIF: "https://raw.githubusercontent.com/aidanpcole/India-PM-2.5-Pollution-Project/main/data/DataForMap/new2015pm25.geojson",
-  TWSIX: "https://raw.githubusercontent.com/aidanpcole/India-PM-2.5-Pollution-Project/main/data/DataForMap/new2016pm25.geojson",
-  TWSEV: "https://raw.githubusercontent.com/aidanpcole/India-PM-2.5-Pollution-Project/main/data/DataForMap/new2017pm25.geojson",
-  TWEIG: "https://raw.githubusercontent.com/aidanpcole/India-PM-2.5-Pollution-Project/main/data/DataForMap/new2018pm25.geojson",
-  TWNIN: "https://raw.githubusercontent.com/aidanpcole/India-PM-2.5-Pollution-Project/main/data/DataForMap/new2019pm25.geojson"
+  TWTEN: "https://raw.githubusercontent.com/aidanpcole/India-PM-2.5-Pollution-Project/main/data/DataForMap/states2010pm25.geojson",
+  TWELE: "https://raw.githubusercontent.com/aidanpcole/India-PM-2.5-Pollution-Project/main/data/DataForMap/states2011pm25.geojson",
+  TWTWE: "https://raw.githubusercontent.com/aidanpcole/India-PM-2.5-Pollution-Project/main/data/DataForMap/states2012pm25.geojson",
+  TWTHI: "https://raw.githubusercontent.com/aidanpcole/India-PM-2.5-Pollution-Project/main/data/DataForMap/states2013pm25.geojson",
+  TWFOU: "https://raw.githubusercontent.com/aidanpcole/India-PM-2.5-Pollution-Project/main/data/DataForMap/states2014pm25.geojson",
+  TWFIF: "https://raw.githubusercontent.com/aidanpcole/India-PM-2.5-Pollution-Project/main/data/DataForMap/states2015pm25.geojson",
+  TWSIX: "https://raw.githubusercontent.com/aidanpcole/India-PM-2.5-Pollution-Project/main/data/DataForMap/states2016pm25.geojson",
+  TWSEV: "https://raw.githubusercontent.com/aidanpcole/India-PM-2.5-Pollution-Project/main/data/DataForMap/states2017pm25.geojson",
+  TWEIG: "https://raw.githubusercontent.com/aidanpcole/India-PM-2.5-Pollution-Project/main/data/DataForMap/states2018pm25.geojson",
+  TWNIN: "https://raw.githubusercontent.com/aidanpcole/India-PM-2.5-Pollution-Project/main/data/DataForMap/states2019pm25.geojson"
 };
 
 //const pointLayers = ["coolingCenters", "emergencyP", "pools", "parks", "hosp"]; // i think this needs to be a dictionary
@@ -38,7 +38,7 @@ let tableData;
 
 function onEachFeatureTWTEN(feature, layer) {
 // use feature.properties to construct popup html
-  let popupContent = '<table class="popupTable"><th><h3>District Stats</h3></th>';
+  let popupContent = '<table class="popupTable"><th><h3>State Stats</h3></th>';
   for (let p of Object.keys(feature.properties)) {
     popupContent += `<tr><td>${p}</td><td>${feature.properties[p]}</td></tr>`;
   }
@@ -51,7 +51,7 @@ function onEachFeatureTWTEN(feature, layer) {
 
 function onEachFeatureTWELE(feature, layer) {
 // use feature.properties to construct popup html
-  let popupContent = '<table class="popupTable"><th><h3>District Stats</h3></th>';
+  let popupContent = '<table class="popupTable"><th><h3>State Stats</h3></th>';
   for (let p of Object.keys(feature.properties)) {
     popupContent += `<tr><td>${p}</td><td>${feature.properties[p]}</td></tr>`;
   }
@@ -64,7 +64,7 @@ function onEachFeatureTWELE(feature, layer) {
 
 function onEachFeatureTWTWE(feature, layer) {
 // use feature.properties to construct popup html
-  let popupContent = '<table class="popupTable"><th><h3>District Stats</h3></th>';
+  let popupContent = '<table class="popupTable"><th><h3>State Stats</h3></th>';
   for (let p of Object.keys(feature.properties)) {
     popupContent += `<tr><td>${p}</td><td>${feature.properties[p]}</td></tr>`;
   }
@@ -77,7 +77,7 @@ function onEachFeatureTWTWE(feature, layer) {
 
 function onEachFeatureTWTHI(feature, layer) {
 // use feature.properties to construct popup html
-  let popupContent = '<table class="popupTable"><th><h3>District Stats</h3></th>';
+  let popupContent = '<table class="popupTable"><th><h3>State Stats</h3></th>';
   for (let p of Object.keys(feature.properties)) {
     popupContent += `<tr><td>${p}</td><td>${feature.properties[p]}</td></tr>`;
   }
@@ -90,7 +90,7 @@ function onEachFeatureTWTHI(feature, layer) {
 
 function onEachFeatureTWFOU(feature, layer) {
 // use feature.properties to construct popup html
-  let popupContent = '<table class="popupTable"><th><h3>District Stats</h3></th>';
+  let popupContent = '<table class="popupTable"><th><h3>State Stats</h3></th>';
   for (let p of Object.keys(feature.properties)) {
     popupContent += `<tr><td>${p}</td><td>${feature.properties[p]}</td></tr>`;
   }
@@ -103,7 +103,7 @@ function onEachFeatureTWFOU(feature, layer) {
 
 function onEachFeatureTWFIF(feature, layer) {
 // use feature.properties to construct popup html
-  let popupContent = '<table class="popupTable"><th><h3>District Stats</h3></th>';
+  let popupContent = '<table class="popupTable"><th><h3>State Stats</h3></th>';
   for (let p of Object.keys(feature.properties)) {
     popupContent += `<tr><td>${p}</td><td>${feature.properties[p]}</td></tr>`;
   }
@@ -116,7 +116,7 @@ function onEachFeatureTWFIF(feature, layer) {
 
 function onEachFeatureTWSIX(feature, layer) {
 // use feature.properties to construct popup html
-  let popupContent = '<table class="popupTable"><th><h3>District Stats</h3></th>';
+  let popupContent = '<table class="popupTable"><th><h3>State Stats</h3></th>';
   for (let p of Object.keys(feature.properties)) {
     popupContent += `<tr><td>${p}</td><td>${feature.properties[p]}</td></tr>`;
   }
@@ -129,7 +129,7 @@ function onEachFeatureTWSIX(feature, layer) {
 
 function onEachFeatureTWSEV(feature, layer) {
 // use feature.properties to construct popup html
-  let popupContent = '<table class="popupTable"><th><h3>District Stats</h3></th>';
+  let popupContent = '<table class="popupTable"><th><h3>State Stats</h3></th>';
   for (let p of Object.keys(feature.properties)) {
     popupContent += `<tr><td>${p}</td><td>${feature.properties[p]}</td></tr>`;
   }
@@ -142,7 +142,7 @@ function onEachFeatureTWSEV(feature, layer) {
 
 function onEachFeatureTWEIG(feature, layer) {
 // use feature.properties to construct popup html
-  let popupContent = '<table class="popupTable"><th><h3>District Stats</h3></th>';
+  let popupContent = '<table class="popupTable"><th><h3>State Stats</h3></th>';
   for (let p of Object.keys(feature.properties)) {
     popupContent += `<tr><td>${p}</td><td>${feature.properties[p]}</td></tr>`;
   }
@@ -155,7 +155,7 @@ function onEachFeatureTWEIG(feature, layer) {
 
 function onEachFeatureTWNIN(feature, layer) {
 // use feature.properties to construct popup html
-  let popupContent = '<table class="popupTable"><th><h3>District Stats</h3></th>';
+  let popupContent = '<table class="popupTable"><th><h3>State Stats</h3></th>';
   for (let p of Object.keys(feature.properties)) {
     popupContent += `<tr><td>${p}</td><td>${feature.properties[p]}</td></tr>`;
   }
