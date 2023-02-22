@@ -36,4 +36,4 @@ initializeMap(initializeDataTable);
 let dataT = [];
 
 
-// updateMap(HVI,styleHVI,onEachFeatureHVI,getTableData);
+// updateMap(TWTEN,styleTWTEN,onEachFeatureTWTEN,getTableData);
