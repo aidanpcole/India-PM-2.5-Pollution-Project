@@ -384,21 +384,21 @@ const stylevars = {
   TWNIN: styleTWNIN
 };
 
-//const bindingsvars = {
-//  TWTEN: onEachFeatureTWTEN,
-//  TWELE: onEachFeatureTWELE,
-//  TWTWE: onEachFeatureTWTWE,
-//  TWTHI: onEachFeatureTWTHI,
-//  TWFOU: onEachFeatureTWFOU,
-//  TWFIF: onEachFeatureTWFIF,
-//  TWSIX: onEachFeatureTWSIX,
-//  TWSEV: onEachFeatureTWSEV,
-//  TWEIG: onEachFeatureTWEIG,
-//  TWNIN: onEachFeatureTWNIN
-//};
+const bindingsvars = {
+  TWTEN: onEachFeatureTWTEN,
+  TWELE: onEachFeatureTWELE,
+  TWTWE: onEachFeatureTWTWE,
+  TWTHI: onEachFeatureTWTHI,
+  TWFOU: onEachFeatureTWFOU,
+  TWFIF: onEachFeatureTWFIF,
+  TWSIX: onEachFeatureTWSIX,
+  TWSEV: onEachFeatureTWSEV,
+  TWEIG: onEachFeatureTWEIG,
+  TWNIN: onEachFeatureTWNIN
+};
 // === Updating the Map === //
 
-function updateMap(url, styleType, callback) {
+function updateMap(url, styleType, bindings, callback) {
   layerGroup.clearLayers();
 
   fetch(url)
@@ -406,7 +406,8 @@ function updateMap(url, styleType, callback) {
     .then(data => {
       dlist = data;
       L.geoJSON(data, {
-        style: styleType
+        style: styleType,
+        onEachFeature: bindings
       }).addTo(layerGroup);
       if (callback) {
         callback(addHistInput, showmeHistogram);
@@ -603,7 +604,7 @@ function emptyCallback() {
 
 
 function initializeMap(callback) {
-  updateMap(mapvars.TWTEN, styleTWTEN, intialTableData);
+  updateMap(mapvars.TWTEN, styleTWTEN, onEachFeatureTWTEN, intialTableData);
   getLegend("TWTEN");
   sidebarContentController("story-slide");
   if (callback) {
@@ -665,7 +666,7 @@ function determineMap() {
 //      updateMappointPCH(mapvars[name], name, emptyCallback);
 //    }
     if (polygonLayers.includes(name)) {
-      updateMap(mapvars[name], stylevars[name], getTableData);
+      updateMap(mapvars[name], stylevars[name], bindingsvars[name], getTableData);
       getLegend(name);
     }
   });
