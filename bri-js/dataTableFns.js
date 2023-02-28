@@ -2,36 +2,38 @@
 let colly;
 function getTableData(callback1, callback2) {
   dataT.length = 0;
-  dlist.features.forEach(ele => dataT.push(ele.properties)); // creates dataT
+  dlist.features.forEach(ele => dataT.push(ele.properties));
+  console.log(dlist);
+  console.log(dataT);// creates dataT
   if (checkies[0].checked) {
-    colly = "2010 PM 2.5";
+    colly = "PM 2.5 Concentration Quantile";
   }
   if (checkies[1].checked) {
-    colly = "2011 PM 2.5";
+    colly = "PM 2.5 Score";
   }
   if (checkies[2].checked) {
-    colly = "2012 PM 2.5";
+    colly = "PM 2.5 Score";
   }
   if (checkies[3].checked) {
-    colly = "2013 PM 2.5";
+    colly = "PM 2.5 Score";
   }
   if (checkies[4].checked) {
-    colly = "2014 PM 2.5";
+    colly = "PM 2.5 Score";
   }
   if (checkies[5].checked) {
-    colly = "2015 PM 2.5";
+    colly = "PM 2.5 Score";
   }
   if (checkies[6].checked) {
-    colly = "2016 PM 2.5";
+    colly = "PM 2.5 Score";
   }
   if (checkies[7].checked) {
-    colly = "2017 PM 2.5";
+    colly = "PM 2.5 Score";
   }
   if (checkies[8].checked) {
-    colly = "2018 PM 2.5";
+    colly = "PM 2.5 Score";
   }
   if (checkies[9].checked) {
-    colly = "2019 PM 2.5";
+    colly = "PM 2.5 Score";
   }
   if (callback1) {
     callback1();
@@ -41,9 +43,10 @@ function getTableData(callback1, callback2) {
   }
 }
 
+
 function intialTableData(callback1, callback2) {
-  dlist.features.forEach(ele => dataT.push(ele.properties)); // creates dataT
-  colly = "2010 PM 2.5";
+  dlist.features.forEach(ele => dataT.push(ele.properties)); // creates dataT, MAYBE ADD YEAR TO BEGINNING OF COLLY
+  colly = "PM 2.5 Concentration Quantile";
   if (callback1) {
     callback1();
   }
@@ -70,9 +73,9 @@ let trace = {};
 
 function showmeHistogram(column, stateID) {
   // document.querySelector("#histHere").innerHTML = ""
-
+  console.log("BEGIN SHOW HISTOGRAM");
   let x = [];
-
+  console.log(column);
   // Plotly.purge('histHere');
   console.log("i might delete plot");
   /* if (Object.keys(trace).length > 0){
@@ -122,12 +125,12 @@ function showmeHistogram(column, stateID) {
 
 function getStateID() {
   h.length = 0;
+  console.log("IN GET");
   const statenum = document.getElementById("stateenter").value;
   let col = colly;
   let stateID;
   stateID = statenum;
   dataT.forEach(d => { if (d.Name === String(stateID)) { h.push(d[col]); } });
-
   showmeHistogram(col, stateID);
 }
 function addHistInput() {
@@ -141,8 +144,9 @@ function addHistInput() {
   input.setAttribute("id", "stateenter");
   inputEnterButton.setAttribute("id", "stateButton");
   inputEnterButton.innerHTML = "Search State";
+  console.log("BEFORE GET");
   inputEnterButton.addEventListener("click", getStateID);
-
+  console.log("AFTER GET");
   hist.setAttribute('id', 'histHere');
   // locate elements
   let motiveFill = document.querySelector("#table");
@@ -155,6 +159,7 @@ function addHistInput() {
   inputcontainer.appendChild(input);
   inputcontainer.appendChild(inputEnterButton);
   motiveFill.appendChild(hist);
+  console.log("END ADD INPUT HIST");
 }
 
 

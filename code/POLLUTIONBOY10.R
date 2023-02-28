@@ -253,62 +253,72 @@ st_write(Complete2019, "/Users/Aidan/Desktop/India Pollution Project/India-PM-2.
 Complete2010States <- pollutionstates2010 %>%
   mutate("Name" = Name,
          "Type" = Type,
+         "PM 2.5 Concentration" = round(pollutionstates2010$grid_code, digits=2),
          "PM 2.5 Concentration Quantile" = ntile(pollutionstates2010$grid_code,5)) %>%
-  dplyr::select("Name","Type","PM 2.5 Concentration Quantile")
+  dplyr::select("Name","Type","PM 2.5 Concentration","PM 2.5 Concentration Quantile")
 
 Complete2011States <- pollutionstates2011 %>%
   mutate("Name" = Name,
          "Type" = Type,
+         "PM 2.5 Concentration" = round(pollutionstates2011$grid_code, digits=2),
          "PM 2.5 Concentration Quantile" = ntile(pollutionstates2011$grid_code,5)) %>%
-  dplyr::select("Name","Type","PM 2.5 Concentration Quantile")
+  dplyr::select("Name","Type","PM 2.5 Concentration","PM 2.5 Concentration Quantile")
 
 Complete2012States <- pollutionstates2012 %>%
   mutate("Name" = Name,
          "Type" = Type,
+         "PM 2.5 Concentration" = round(pollutionstates2012$grid_code, digits=2),
          "PM 2.5 Concentration Quantile" = ntile(pollutionstates2012$grid_code,5)) %>%
-  dplyr::select("Name","Type","PM 2.5 Concentration Quantile")
+  dplyr::select("Name","Type","PM 2.5 Concentration","PM 2.5 Concentration Quantile")
 
 Complete2013States <- pollutionstates2013 %>%
   mutate("Name" = Name,
          "Type" = Type,
+         "PM 2.5 Concentration" = round(pollutionstates2013$grid_code, digits=2),
          "PM 2.5 Concentration Quantile" = ntile(pollutionstates2013$grid_code,5)) %>%
-  dplyr::select("Name","Type","PM 2.5 Concentration Quantile")
+  dplyr::select("Name","Type","PM 2.5 Concentration","PM 2.5 Concentration Quantile")
 
 Complete2014States <- pollutionstates2014 %>%
   mutate("Name" = Name,
          "Type" = Type,
+         "PM 2.5 Concentration" = round(pollutionstates2014$grid_code, digits=2),
          "PM 2.5 Concentration Quantile" = ntile(pollutionstates2014$grid_code,5)) %>%
-  dplyr::select("Name","Type","PM 2.5 Concentration Quantile")
+  dplyr::select("Name","Type","PM 2.5 Concentration","PM 2.5 Concentration Quantile")
 
 Complete2015States <- pollutionstates2015 %>%
   mutate("Name" = Name,
          "Type" = Type,
+         "PM 2.5 Concentration" = round(pollutionstates2015$grid_code, digits=2),
          "PM 2.5 Concentration Quantile" = ntile(pollutionstates2015$grid_code,5)) %>%
-  dplyr::select("Name","Type","PM 2.5 Concentration Quantile")
+  dplyr::select("Name","Type","PM 2.5 Concentration","PM 2.5 Concentration Quantile")
 
 Complete2016States <- pollutionstates2016 %>%
   mutate("Name" = Name,
          "Type" = Type,
+         "PM 2.5 Concentration" = round(pollutionstates2016$grid_code, digits=2),
          "PM 2.5 Concentration Quantile" = ntile(pollutionstates2016$grid_code,5)) %>%
-  dplyr::select("Name","Type","PM 2.5 Concentration Quantile")
+  dplyr::select("Name","Type","PM 2.5 Concentration","PM 2.5 Concentration Quantile")
 
 Complete2017States <- pollutionstates2017 %>%
   mutate("Name" = Name,
          "Type" = Type,
+         "PM 2.5 Concentration" = round(pollutionstates2017$grid_code, digits=2),
          "PM 2.5 Concentration Quantile" = ntile(pollutionstates2017$grid_code,5)) %>%
-  dplyr::select("Name","Type","PM 2.5 Concentration Quantile")
+  dplyr::select("Name","Type","PM 2.5 Concentration","PM 2.5 Concentration Quantile")
 
 Complete2018States <- pollutionstates2018 %>%
   mutate("Name" = Name,
          "Type" = Type,
+         "PM 2.5 Concentration" = round(pollutionstates2018$grid_code, digits=2),
          "PM 2.5 Concentration Quantile" = ntile(pollutionstates2018$grid_code,5)) %>%
-  dplyr::select("Name","Type","PM 2.5 Concentration Quantile")
+  dplyr::select("Name","Type","PM 2.5 Concentration","PM 2.5 Concentration Quantile")
 
 Complete2019States <- pollutionstates2019 %>%
   mutate("Name" = Name,
          "Type" = Type,
+         "PM 2.5 Concentration" = round(pollutionstates2019$grid_code, digits=2),
          "PM 2.5 Concentration Quantile" = ntile(pollutionstates2019$grid_code,5)) %>%
-  dplyr::select("Name","Type","PM 2.5 Concentration Quantile")
+  dplyr::select("Name","Type","PM 2.5 Concentration","PM 2.5 Concentration Quantile")
 
 st_write(Complete2010States, "/Users/Aidan/Desktop/India Pollution Project/India-PM-2.5-Pollution-Project/data/DataForMap/states2010pm25.geojson")
 st_write(Complete2011States, "/Users/Aidan/Desktop/India Pollution Project/India-PM-2.5-Pollution-Project/data/DataForMap/states2011pm25.geojson")

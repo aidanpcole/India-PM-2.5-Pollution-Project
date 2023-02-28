@@ -603,6 +603,7 @@ function emptyCallback() {
 
 
 function initializeMap(callback) {
+  console.log("INITIALIZEMAP FN");
   updateMap(mapvars.TWTEN, styleTWTEN, intialTableData);
   getLegend("TWTEN");
   sidebarContentController("story-slide");
@@ -735,16 +736,16 @@ function anyChecked() {
   return trues;
 }
 
-//function onCheck() {
-//  console.log("checkbox checked!");
-//  let trues = anyChecked();
-//  console.log(trues);
-//  if (trues.length > 0) {
-//    determineMap();
-//  } else {
-//    layerGroup.clearLayers();
-//  }
-//}
+function onCheck() {
+  console.log("checkbox checked!");
+  let trues = anyChecked();
+  console.log(trues);
+  if (trues.length > 0) {
+    determineMap();
+  } else {
+    layerGroup.clearLayers();
+  }
+}
 
 //function resourceCheck() {
 //  if (!checkies[3].checked) {
