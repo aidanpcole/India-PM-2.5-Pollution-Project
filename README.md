@@ -16,4 +16,5 @@ PM 2.5 pollution on people's cognition.
 
 ## Final Product
 
-[View our site](insert github.io link here) 
+[![india_pm25](India_PM25.png)](https://aidanpcole.github.io/India-PM-2.5-Pollution-Project/)
+[View my site](https://aidanpcole.github.io/India-PM-2.5-Pollution-Project/)
