@@ -54,6 +54,7 @@ const sidebarContentController = function (slide) {
     fillSlide(slides[1]);
     let checkboxContainer = document.querySelector(".slide-content");
     checkies = checkboxContainer.firstChild.querySelectorAll("input");
+    console.log("MID SIDEBAR");
     let allButResources = [checkies[0],
       checkies[1],
       checkies[2],

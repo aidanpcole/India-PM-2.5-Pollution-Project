@@ -25,7 +25,7 @@ L.control.zoom({
 
 initializeMap(initializeDataTable);
 // initializeDataTable(); //<-- this will also be called when zoom level is 9
-
+console.log("MAP INITIALIZED CALLING FNS");
 
 /* === Fillling Map and Data Table === */
 // clear map
@@ -36,4 +36,4 @@ initializeMap(initializeDataTable);
 let dataT = [];
 
 
-// updateMap(TWTEN,styleTWTEN,onEachFeatureTWTEN,getTableData);
+//updateMap(TWTEN,styleTWTEN,onEachFeatureTWTEN,getTableData);

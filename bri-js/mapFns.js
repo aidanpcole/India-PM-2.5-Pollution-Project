@@ -5,7 +5,7 @@ dataT, showmeHistogram, addHistInput, checkies, showdown */
 let dlist;
 /* === MY DATA ON GITHUB === */
 const mapvars = {
-  TWTEN: "https://raw.githubusercontent.com/aidanpcole/India-PM-2.5-Pollution-Project/main/data/DataForMap/states2010pm25.geojson",
+  TWTEN: "https://raw.githubusercontent.com/aidanpcole/India-PM-2.5-Pollution-Project/main/data/DataForMap/simplestates2010pm25.geojson",
   TWELE: "https://raw.githubusercontent.com/aidanpcole/India-PM-2.5-Pollution-Project/main/data/DataForMap/states2011pm25.geojson",
   TWTWE: "https://raw.githubusercontent.com/aidanpcole/India-PM-2.5-Pollution-Project/main/data/DataForMap/states2012pm25.geojson",
   TWTHI: "https://raw.githubusercontent.com/aidanpcole/India-PM-2.5-Pollution-Project/main/data/DataForMap/states2013pm25.geojson",
@@ -384,29 +384,30 @@ const stylevars = {
   TWNIN: styleTWNIN
 };
 
-//const bindingsvars = {
-//  TWTEN: onEachFeatureTWTEN,
-//  TWELE: onEachFeatureTWELE,
-//  TWTWE: onEachFeatureTWTWE,
-//  TWTHI: onEachFeatureTWTHI,
-//  TWFOU: onEachFeatureTWFOU,
-//  TWFIF: onEachFeatureTWFIF,
-//  TWSIX: onEachFeatureTWSIX,
-//  TWSEV: onEachFeatureTWSEV,
-//  TWEIG: onEachFeatureTWEIG,
-//  TWNIN: onEachFeatureTWNIN
-//};
+const bindingsvars = {
+  TWTEN: onEachFeatureTWTEN,
+  TWELE: onEachFeatureTWELE,
+  TWTWE: onEachFeatureTWTWE,
+  TWTHI: onEachFeatureTWTHI,
+  TWFOU: onEachFeatureTWFOU,
+  TWFIF: onEachFeatureTWFIF,
+  TWSIX: onEachFeatureTWSIX,
+  TWSEV: onEachFeatureTWSEV,
+  TWEIG: onEachFeatureTWEIG,
+  TWNIN: onEachFeatureTWNIN
+};
 // === Updating the Map === //
 
-function updateMap(url, styleType, callback) {
+function updateMap(url, styleType, bindings, callback) {
   layerGroup.clearLayers();
-
+  console.log("UPDATE MAP");
   fetch(url)
     .then(resp => resp.json())
     .then(data => {
       dlist = data;
       L.geoJSON(data, {
-        style: styleType
+        style: styleType,
+        onEachFeature: bindings
       }).addTo(layerGroup);
       if (callback) {
         callback(addHistInput, showmeHistogram);
@@ -604,7 +605,7 @@ function emptyCallback() {
 
 function initializeMap(callback) {
   console.log("INITIALIZEMAP FN");
-  updateMap(mapvars.TWTEN, styleTWTEN, intialTableData);
+  updateMap(mapvars.TWTEN, styleTWTEN, onEachFeatureTWTEN, intialTableData);
   getLegend("TWTEN");
   sidebarContentController("story-slide");
   if (callback) {
@@ -647,6 +648,7 @@ function disable(box) {
 // === Determine & Update Map From Check boxes == //
 function determineMap() {
   layerGroup.clearLayers();
+  console.log("IN DETERMINE MAP");
   let names = [];
   checkies.forEach(c => {
     if (c.checked === true) {
@@ -666,7 +668,7 @@ function determineMap() {
 //      updateMappointPCH(mapvars[name], name, emptyCallback);
 //    }
     if (polygonLayers.includes(name)) {
-      updateMap(mapvars[name], stylevars[name], getTableData);
+      updateMap(mapvars[name], stylevars[name], bindingsvars[name], getTableData);
       getLegend(name);
     }
   });

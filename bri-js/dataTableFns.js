@@ -1,6 +1,7 @@
 /* global dataT, dlist, checkies, showdown, motive */
 let colly;
 function getTableData(callback1, callback2) {
+  console.log("GET TABLE DATA");
   dataT.length = 0;
   dlist.features.forEach(ele => dataT.push(ele.properties));
   console.log(dlist);
@@ -57,11 +58,13 @@ function intialTableData(callback1, callback2) {
 
 /*= === Initial Data Table Content Function === */
 function initializeDataTable() {
+  console.log("INITIALIZE DATA TABLE");
   const converter = new showdown.Converter({ smartIndentationFix: true });
   let motiveFill = document.querySelector("#table");
   let accordionheading = document.querySelector(".accordion-trigger");
   accordionheading.innerHTML = motive.title;
   motiveFill.innerHTML = converter.makeHtml(motive.content);
+  console.log("END INITIALIZE");
 }
 
 
