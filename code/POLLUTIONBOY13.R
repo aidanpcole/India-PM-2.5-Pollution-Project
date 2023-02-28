@@ -106,27 +106,17 @@ pollution2019 <- st_read("/Users/Aidan/Desktop/India Pollution Project/India-PM-
 
 
 
-# WAS 24048
-pollutionstates2010 <- st_read("/Users/Aidan/Desktop/India Pollution Project/India-PM-2.5-Pollution-Project/data/ReferenceData/2010pollutionstates.geojson") %>%
-  st_transform('EPSG:23948')
-pollutionstates2011 <- st_read("/Users/Aidan/Desktop/India Pollution Project/India-PM-2.5-Pollution-Project/data/ReferenceData/2011pollutionstates.geojson") %>%
-  st_transform('EPSG:23948')
-pollutionstates2012 <- st_read("/Users/Aidan/Desktop/India Pollution Project/India-PM-2.5-Pollution-Project/data/ReferenceData/2012pollutionstates.geojson") %>%
-  st_transform('EPSG:23948')
-pollutionstates2013 <- st_read("/Users/Aidan/Desktop/India Pollution Project/India-PM-2.5-Pollution-Project/data/ReferenceData/2013pollutionstates.geojson") %>%
-  st_transform('EPSG:23948')
-pollutionstates2014 <- st_read("/Users/Aidan/Desktop/India Pollution Project/India-PM-2.5-Pollution-Project/data/ReferenceData/2014pollutionstates.geojson") %>%
-  st_transform('EPSG:23948')
-pollutionstates2015 <- st_read("/Users/Aidan/Desktop/India Pollution Project/India-PM-2.5-Pollution-Project/data/ReferenceData/2015pollutionstates.geojson") %>%
-  st_transform('EPSG:23948')
-pollutionstates2016 <- st_read("/Users/Aidan/Desktop/India Pollution Project/India-PM-2.5-Pollution-Project/data/ReferenceData/2016pollutionstates.geojson") %>%
-  st_transform('EPSG:23948')
-pollutionstates2017 <- st_read("/Users/Aidan/Desktop/India Pollution Project/India-PM-2.5-Pollution-Project/data/ReferenceData/2017pollutionstates.geojson") %>%
-  st_transform('EPSG:23948')
-pollutionstates2018 <- st_read("/Users/Aidan/Desktop/India Pollution Project/India-PM-2.5-Pollution-Project/data/ReferenceData/2018pollutionstates.geojson") %>%
-  st_transform('EPSG:23948')
-pollutionstates2019 <- st_read("/Users/Aidan/Desktop/India Pollution Project/India-PM-2.5-Pollution-Project/data/ReferenceData/2019pollutionstates.geojson") %>%
-  st_transform('EPSG:23948')
+# WAS 24048, then st_transform('EPSG:23948')
+pollutionstates2010 <- st_read("/Users/Aidan/Desktop/India Pollution Project/India-PM-2.5-Pollution-Project/data/ReferenceData/2010pollutionstates.geojson") 
+pollutionstates2011 <- st_read("/Users/Aidan/Desktop/India Pollution Project/India-PM-2.5-Pollution-Project/data/ReferenceData/2011pollutionstates.geojson")
+pollutionstates2012 <- st_read("/Users/Aidan/Desktop/India Pollution Project/India-PM-2.5-Pollution-Project/data/ReferenceData/2012pollutionstates.geojson")
+pollutionstates2013 <- st_read("/Users/Aidan/Desktop/India Pollution Project/India-PM-2.5-Pollution-Project/data/ReferenceData/2013pollutionstates.geojson")
+pollutionstates2014 <- st_read("/Users/Aidan/Desktop/India Pollution Project/India-PM-2.5-Pollution-Project/data/ReferenceData/2014pollutionstates.geojson")
+pollutionstates2015 <- st_read("/Users/Aidan/Desktop/India Pollution Project/India-PM-2.5-Pollution-Project/data/ReferenceData/2015pollutionstates.geojson")
+pollutionstates2016 <- st_read("/Users/Aidan/Desktop/India Pollution Project/India-PM-2.5-Pollution-Project/data/ReferenceData/2016pollutionstates.geojson") 
+pollutionstates2017 <- st_read("/Users/Aidan/Desktop/India Pollution Project/India-PM-2.5-Pollution-Project/data/ReferenceData/2017pollutionstates.geojson")
+pollutionstates2018 <- st_read("/Users/Aidan/Desktop/India Pollution Project/India-PM-2.5-Pollution-Project/data/ReferenceData/2018pollutionstates.geojson") 
+pollutionstates2019 <- st_read("/Users/Aidan/Desktop/India Pollution Project/India-PM-2.5-Pollution-Project/data/ReferenceData/2019pollutionstates.geojson")
 
 
 
