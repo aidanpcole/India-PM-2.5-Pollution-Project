@@ -6,34 +6,34 @@ function getTableData(callback1, callback2) {
   console.log(dlist);
   console.log(dataT);// creates dataT
   if (checkies[0].checked) {
-    colly = "PM 2.5 Concentration Quantile";
+    colly = "2010 PM 2.5 Score";
   }
   if (checkies[1].checked) {
-    colly = "PM 2.5 Score";
+    colly = "2011 PM 2.5 Score";
   }
   if (checkies[2].checked) {
-    colly = "PM 2.5 Score";
+    colly = "2012 PM 2.5 Score";
   }
   if (checkies[3].checked) {
-    colly = "PM 2.5 Score";
+    colly = "2013 PM 2.5 Score";
   }
   if (checkies[4].checked) {
-    colly = "PM 2.5 Score";
+    colly = "2014 PM 2.5 Score";
   }
   if (checkies[5].checked) {
-    colly = "PM 2.5 Score";
+    colly = "2015 PM 2.5 Score";
   }
   if (checkies[6].checked) {
-    colly = "PM 2.5 Score";
+    colly = "2016 PM 2.5 Score";
   }
   if (checkies[7].checked) {
-    colly = "PM 2.5 Score";
+    colly = "2017 PM 2.5 Score";
   }
   if (checkies[8].checked) {
-    colly = "PM 2.5 Score";
+    colly = "2018 PM 2.5 Score";
   }
   if (checkies[9].checked) {
-    colly = "PM 2.5 Score";
+    colly = "2019 PM 2.5 Score";
   }
   if (callback1) {
     callback1();
@@ -46,7 +46,7 @@ function getTableData(callback1, callback2) {
 
 function intialTableData(callback1, callback2) {
   dlist.features.forEach(ele => dataT.push(ele.properties)); // creates dataT, MAYBE ADD YEAR TO BEGINNING OF COLLY
-  colly = "PM 2.5 Concentration Quantile";
+  colly = "2010 PM 2.5 Score";
   if (callback1) {
     callback1();
   }
