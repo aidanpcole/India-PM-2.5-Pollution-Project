@@ -105,7 +105,7 @@ function showmeHistogram(column, stateID) {
           x0: h[0],
           y0: 0,
           x1: h[0],
-          y1: 25,
+          y1: 22,
           line: {
             color: 'rgb(255, 231, 76)',
             width: 3
