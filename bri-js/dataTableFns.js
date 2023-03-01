@@ -94,7 +94,7 @@ function showmeHistogram(column, stateID) {
     marker: { color: '#08415C' },
   };
   console.log(x);
-
+/// y1 was 145
   if (stateID) {
     let datahist = [trace];
     layout = {
@@ -105,7 +105,7 @@ function showmeHistogram(column, stateID) {
           x0: h[0],
           y0: 0,
           x1: h[0],
-          y1: 145,
+          y1: 25,
           line: {
             color: 'rgb(255, 231, 76)',
             width: 3
